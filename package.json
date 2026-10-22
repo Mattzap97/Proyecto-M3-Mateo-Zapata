@@ -1,0 +1,21 @@
+{
+  "name": "proyecto-m3-mateo-zapata",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mattzap97/Proyecto-M3-Mateo-Zapata.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Mattzap97/Proyecto-M3-Mateo-Zapata/issues"
+  },
+  "homepage": "https://github.com/Mattzap97/Proyecto-M3-Mateo-Zapata#readme"
+}
