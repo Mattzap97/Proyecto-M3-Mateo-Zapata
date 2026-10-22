@@ -124,3 +124,23 @@ body {
 .chatComposer__send:hover {
     background: #374151;
 }
+
+
+@media (min-width: 768px) {
+    .chatHeader {
+        padding: 1.25rem 1.5 rem;
+    }
+
+    .chatMessages {
+        padding: 1.5rem;
+        gap: 1rem;
+    }
+
+    .chatComposer {
+        padding: 1rem 1.5rem;
+    }
+
+    .message {
+        max-width: 75%;
+    }
+}
