@@ -144,3 +144,34 @@ body {
         max-width: 75%;
     }
 }
+
+
+
+@media (min-width: 1024px) {
+    body {
+        background: #f3f4f6;
+    }
+
+    .chatApp {
+        max-width: 64rem;
+        margin: 0 auto;
+        border-left: 1px solid #e5e7eb;
+        border-right: 1px solid #e5e7eb;
+    }
+
+    .chatHeader {
+        padding: 1.5rem 2rem;
+    }
+
+    .chatMessages {
+        padding: 2rem;
+    }
+
+    .chatComposer {
+        padding: 1.5rem 2rem;
+    }
+
+    .message {
+        max-width: 68%;
+    }
+}
