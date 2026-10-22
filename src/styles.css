@@ -163,6 +163,14 @@ body {
         padding: 1.5rem 2rem;
     }
 
+    .chatHeader__title {
+        font-size: 1.5rem;
+    }
+
+    .chatHeader__subtitle{
+        font-size: 1.15rem;
+    }
+
     .chatMessages {
         padding: 2rem;
     }
