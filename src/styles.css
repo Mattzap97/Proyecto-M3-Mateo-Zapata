@@ -87,3 +87,40 @@ body {
     background: #111827;
     color: #ffffff; 
 }
+
+
+/*==================================================================================================================================================
+                                            DISEÑO PARA CHAT COMPOSER (INPUT Y BOTÓN)
+====================================================================================================================================================*/
+
+.chatComposer__input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.75rem;
+    outline: none;
+}
+
+.chatComposer__input:focus {
+    border-color: #111827;
+}
+
+.chatComposer__send {
+    padding: 0.75rem 1rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    background: #111827;
+    border: 0;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.chatComposer__send:hover {
+    background: #374151;
+}
