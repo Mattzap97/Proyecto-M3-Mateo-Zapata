@@ -1,0 +1,12 @@
+export function renderAbout () {
+    const app = document.querySelector('#app');
+    
+    app.innerHTML = `
+        <section class="view view--about">
+            <h1>Sobre este proyecto</h1>
+            <p>Esta es una POC desarrollada para ComicSansCon.</p>
+            <p>El personaje elegido es <strong>[Lucy Heartfilia]</strong></p>
+            <p>Stack: HTML, CSS, JavaScript vanilla, Vercel functions, Gemini IA</p>
+        </section>
+    `
+}
