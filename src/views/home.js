@@ -1,5 +1,5 @@
 export function renderHome () {
-    const app = document.querySelector('#app');
+    const app = document.querySelector("#app");
 
     app.innerHTML = `
         <section class="view view--home">

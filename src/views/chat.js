@@ -1,5 +1,5 @@
 export function renderChat () {
-    const app = document.querySelector('#app');
+    const app = document.querySelector("#app");
 
     app.innerHTML = `
         <div class="chatApp">
