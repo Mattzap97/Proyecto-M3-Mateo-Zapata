@@ -1,1 +1,3 @@
-const app = document.querySelector('#app')
+import { router } from "./router.js";
+
+router();
