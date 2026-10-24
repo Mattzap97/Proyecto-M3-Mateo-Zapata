@@ -46,4 +46,32 @@ export function renderChat () {
             </form>
         </div>
     `;
+
+    setupChat();
+    scrollToBottom();
+
+}
+
+
+function renderMessages () {
+
+    return state.messages.map(
+        (msg) => `
+            <div class="message message--${msg.role}">${msg.text}</div>
+        `,
+    ).join("");
+}
+
+function renderStatus () {
+
+    if(state.status === "loading") {
+        return `<div class="message message--character message--typing">Lucy está escribiendo...</div>`;
+    }
+
+    if(state.status === "error") {
+        return `<div class="message message--error">${state.error}</div>`
+    }
+
+    return "";
+    
 }
