@@ -57,10 +57,12 @@ function renderMessages () {
 
     return state.messages.map(
         (msg) => `
-            <div class="message message--${msg.role}">${msg.text}</div>
+            <div class="message message--${msg.role}">${escapeHtml(msg.text)}</div>
         `,
     ).join("");
 }
+
+
 
 function renderStatus () {
 
@@ -73,5 +75,50 @@ function renderStatus () {
     }
 
     return "";
-    
+
+}
+
+
+
+function escapeHtml(string) {
+
+    const div = document.createElement("div");
+    div.textContent = string;
+    return div.innerHTML;
+
+}
+
+
+function setupChat () {
+
+    const $form = document.querySelector("#chatComposer");
+    const $input = document.querySelector("#chatInput");
+
+    $form.addEventListener("submit", async (event) => {
+        event.preventDefault();
+
+        const text = $input.value.trim();
+        if(!text) return;
+
+        const userMessage = { role: "user", text };
+        setState({
+            messages: [... state.messages, userMessage],
+            status: "loading",
+            error: null,
+        })
+    })
+}
+
+
+
+
+function getCharacterReply(userText) {
+    return new Promise((resolve, reject) => {
+        const delay = 800 * Math.random() * 1200;
+
+        setTimeout(() => {
+            resolve(`Recibido: "${userText}". (Esta respuesta hoy es simulada, ya mismo implemento la IA)`);
+        }, delay);
+
+    })
 }
