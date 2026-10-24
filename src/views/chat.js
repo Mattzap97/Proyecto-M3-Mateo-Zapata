@@ -106,7 +106,26 @@ function setupChat () {
             status: "loading",
             error: null,
         })
+
+        try {
+            const reply = await getCharacterReply(text);
+            setState({
+            messages: [... state.messages, { role: "character", text: reply }],
+            status: "idle",
+            error: null,
+        })
+            
+        } catch (error) {
+
+            setState({
+                status: "error",
+                error: "Ups, no te pude responder. Reintentalo.",
+            })
+            
+        }
     })
+
+    $input.focus();
 }
 
 
