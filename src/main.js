@@ -6,3 +6,5 @@ setupLinkInterception();
 window.addEventListener("popstate", router);
 
 router();
+
+
