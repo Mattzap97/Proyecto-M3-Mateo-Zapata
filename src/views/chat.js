@@ -23,5 +23,5 @@ export function renderChat () {
                 <button class="chatComposer__send" type="submit">Enviar</button>
             </form>
         </div>
-    `
+    `;
 }

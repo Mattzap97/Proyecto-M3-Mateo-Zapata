@@ -3,9 +3,10 @@ export function renderHome () {
 
     app.innerHTML = `
         <section class="view view--home">
-            <h1>Chatea con tu personaje favorito</h1>
-            <p>Una experiencia de conversación con la IA</p>
-            <a class="btn btn--primary"  href="/chat">Empezar a chatear</a>
+            <h1>Chatea con Lucy Heartfilia</h1>
+            <img src="../Documentación/assets/Lucy.jpeg" alt="Lucy Heartfilia">
+            <p>Talentosa maga celestial de Fairy Tail que destaca por su gran empatía</p>
+            <a class="btn btn--primary"  href="/chat">Chatear con Lucy</a>
         </section>
-    `
+    `;
 }
