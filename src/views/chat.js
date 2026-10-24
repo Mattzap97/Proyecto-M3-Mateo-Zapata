@@ -107,19 +107,43 @@ function setupChat () {
         const text = $input.value.trim();
         if(!text) return;
 
-        const userMessage = { role: "user", text };
+        await sendMessage(text);
+        $input.value = "";
+    })
+
+    $retry?.addEventListener("click", () => {
+        if(state.lastUserMessage) {
+            sendMessage(state.lastUserMessage, true);
+        }
+    })
+
+
+    $input.focus();
+}
+
+
+async function sendMessage(retry, isRetry = false) {
+    
+    if(!isRetry) {
+
         setState({
-            messages: [... state.messages, userMessage],
+            messages: [...state.messages, { role: "user", text }],
             status: "loading",
             error: null,
+            lastUserMessage: text,
         })
 
-        try {
+    } else {
+        setState({ status: "loading", error: null });
+    }
+
+    try {
             const reply = await getCharacterReply(text);
             setState({
             messages: [... state.messages, { role: "character", text: reply }],
             status: "idle",
             error: null,
+            lastUserMessage: null,
         })
             
         } catch (error) {
@@ -130,9 +154,7 @@ function setupChat () {
             })
             
         }
-    })
-
-    $input.focus();
+        
 }
 
 
@@ -143,6 +165,7 @@ function scrollToBottom () {
     if($messages) {
         $messages.scrollTop = $messages.scrollHeight;
     }
+    
 }
 
 

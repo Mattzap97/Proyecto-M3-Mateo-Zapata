@@ -305,3 +305,20 @@ body {
     opacity: 0.5;
     cursor: not-allowed;
 }
+
+.message__retry {
+    display: block;
+    margin: 0.5rem auto 8;
+    padding: 0.25rem 0.75rem;
+    background: #b91c1c;
+    color: #ffffff;
+    border: 0;
+    border-radius: 0.25rem;
+    font: inherit;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+.message__retry:hover{
+    background: #991b1b;
+}
