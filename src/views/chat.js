@@ -5,6 +5,7 @@ const state = {
         text: "Hola! soy Lucy. ¿De qué te gustaría hablar?"
     }],
     error: null,
+    lastUserMessage: null,
 
 }
 
@@ -71,7 +72,12 @@ function renderStatus () {
     }
 
     if(state.status === "error") {
-        return `<div class="message message--error">${state.error}</div>`
+        return `
+        <div class="message message--error">
+            ${state.error}
+            <button class="message__retry" id="retryBtn" type="button">Reintentar</button>
+        </div>
+        `;
     }
 
     return "";
@@ -93,6 +99,7 @@ function setupChat () {
 
     const $form = document.querySelector("#chatComposer");
     const $input = document.querySelector("#chatInput");
+    const $retry = document.querySelector("#retryBtn");
 
     $form.addEventListener("submit", async (event) => {
         event.preventDefault();
