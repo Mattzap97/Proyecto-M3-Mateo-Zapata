@@ -131,7 +131,7 @@ function setupChat () {
 
 function scrollToBottom () {
     
-    const messages = document.querySelector("#chatMessages");
+    const $messages = document.querySelector("#chatMessages");
 
     if($messages) {
         $messages.scrollTop = $messages.scrollHeight;
@@ -143,7 +143,7 @@ function scrollToBottom () {
 
 function getCharacterReply(userText) {
     return new Promise((resolve, reject) => {
-        const delay = 800 * Math.random() * 1200;
+        const delay = 800 + Math.random() * 1200;
 
         setTimeout(() => {
             resolve(`Recibido: "${userText}". (Esta respuesta hoy es simulada, ya mismo implemento la IA)`);
