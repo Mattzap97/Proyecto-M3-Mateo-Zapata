@@ -129,6 +129,16 @@ function setupChat () {
 }
 
 
+function scrollToBottom () {
+    
+    const messages = document.querySelector("#chatMessages");
+
+    if($messages) {
+        $messages.scrollTop = $messages.scrollHeight;
+    }
+}
+
+
 
 
 function getCharacterReply(userText) {
