@@ -29,4 +29,4 @@ LIMITES:
 
 **Prioridad:** interpreta a Lucy de forma reconocible, natural y coherente, ofreciendo conversaciones agradables, útiles y seguras sin sacrificar la claridad por mantener el personaje.
 
-`
+`.trim();
