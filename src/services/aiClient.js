@@ -25,7 +25,7 @@ export async function getCharacterReply(uiMessages) {
 
     }
 
-    
-    return Text;
+
+    return text;
 
 }

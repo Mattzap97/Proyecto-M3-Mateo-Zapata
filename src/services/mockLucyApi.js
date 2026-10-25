@@ -27,7 +27,7 @@ function buildOkResponse (replyText, inputTokens) {
                 finishReason: "STOP",
             },
         ],
-        usageMetaData: {
+        usageMetadata: {
             promptTokenCount: inputTokens,
             candidatesTokenCount: outputTokens,
             totalTokenCount: inputTokens + outputTokens,

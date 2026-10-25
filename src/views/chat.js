@@ -125,7 +125,7 @@ function setupChat () {
 
 
 async function sendMessage(text, isRetry = false) {
-    const nextMessages = isRetry ? state.messages : [...state,messages, { role: "user", text }];
+    const nextMessages = isRetry ? state.messages : [...state.messages, { role: "user", text }];
 
     setState({
         messages: nextMessages,
