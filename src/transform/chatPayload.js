@@ -40,3 +40,16 @@ export function normalizeAIResponse(raw) {
         .trim();
 
 }
+
+// TIPO HELPERS PARA EXTRAER HISTORIAL, PUSH PARA MENSAJES DE USUARIO Y ASISTENTE
+export function appendUserMessage(messages, text) {
+    return [...messages, { role: "user", text }];
+}
+
+export function appendAssistantMessage (messages, text) {
+    return [...messages, { role: "character", text }];
+}
+
+export function getTrimmedHistory(messages, maxTurns = MAX_TURNS_HISTORY) {
+    return messages.slice(-maxTurns);
+}
