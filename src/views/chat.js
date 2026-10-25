@@ -1,3 +1,5 @@
+import { getCharacterReply } from "../services/aiClient.js";
+
 const state = {
 
     status: "idle",    // 'idle', 'loading', 'error'
@@ -123,24 +125,19 @@ function setupChat () {
 
 
 async function sendMessage(text, isRetry = false) {
-    
-    if(!isRetry) {
+    const nextMessages = isRetry ? state.messages : [...state,messages, { role: "user", text }];
 
-        setState({
-            messages: [ ...state.messages, { role: "user", text }],
-            status: "loading",
-            error: null,
-            lastUserMessage: text,
-        })
-
-    } else {
-        setState({ status: "loading", error: null });
-    }
+    setState({
+        messages: nextMessages,
+        status: "loading",
+        error: null,
+        lastUserMessage: isRetry ? state.lastUserMessage : text,
+    })
 
     try {
-            const reply = await getCharacterReply(text);
+            const reply = await getCharacterReply(nextMessages);
             setState({
-            messages: [... state.messages, { role: "character", text: reply }],
+            messages: [... nextMessages, { role: "character", text: reply }],
             status: "idle",
             error: null,
             lastUserMessage: null,
@@ -168,16 +165,3 @@ function scrollToBottom () {
     
 }
 
-
-
-
-function getCharacterReply(userText) {
-    return new Promise((resolve, reject) => {
-        const delay = 800 + Math.random() * 1200;
-
-        setTimeout(() => {
-            resolve(`Recibido: "${userText}". (Esta respuesta hoy es simulada, ya mismo implemento la IA)`);
-        }, delay);
-
-    })
-}
