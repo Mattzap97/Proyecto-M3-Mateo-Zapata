@@ -48,13 +48,28 @@ function estimateInputTokens(payload) {
 }
 
 
+const RATE_LIMIT_PROBABILITY = 0.5;
+
+function buildRateLimitError () {
+    const error = new Error("Rate limit exceded");
+    error.status = 429;
+    error.retryAfterSeconds = 5;
+    return error;
+    
+}
+
+
 
 export function send(payload) {
 
-    return new Promise((resolve) => {
+    return new Promise((resolve, reject) => {
         const delay = 600 + Math.random() * 1000;
 
         setTimeout(() => {
+            if(Math.random() < RATE_LIMIT_PROBABILITY) {
+                reject(buildRateLimitError());
+                return;
+            }
 
             const inputTokens = estimateInputTokens(payload);
             const reply = pickReply();
