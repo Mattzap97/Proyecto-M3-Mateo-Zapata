@@ -122,12 +122,12 @@ function setupChat () {
 }
 
 
-async function sendMessage(retry, isRetry = false) {
+async function sendMessage(text, isRetry = false) {
     
     if(!isRetry) {
 
         setState({
-            messages: [...state.messages, { role: "user", text }],
+            messages: [ ...state.messages, { role: "user", text }],
             status: "loading",
             error: null,
             lastUserMessage: text,
