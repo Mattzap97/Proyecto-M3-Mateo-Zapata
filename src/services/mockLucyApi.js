@@ -39,9 +39,9 @@ function estimateInputTokens(payload) {
     const systemText = payload.systemInstruction?.parts?.[0]?.text ?? "";
 
     const messagesText = (payload.contents ?? [])
-    .flatMap((c) => c.parts ?? [])
-    .map((p) => p.text ?? "")
-    .join(" ");
+        .flatMap((c) => c.parts ?? [])
+        .map((p) => p.text ?? "")
+        .join(" ");
 
     return Math.ceil((systemText.length + messagesText.length) / 4);
 
