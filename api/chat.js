@@ -1,6 +1,8 @@
-import { FinishReason } from "@google/generative-ai";
+import { GoogleGenerativeAI } from "@google/generative-ai";
 
-export default function handler(req, res) {
+const RETRY_AFTER_FALLBACK_SECONDS = 10;
+
+export default async function handler(req, res) {
     if(req.method !== "POST") {
         return res.status(405).json({ error: "Método no permitido" });
     }
@@ -12,23 +14,15 @@ export default function handler(req, res) {
         return res.status(400).json({ error: "Contents es requerido y no debe estar vacío." })
     }
     
-    return res.status(200).json({
-        candidates: [
-            {
-                content: {
-                    parts: [{ text: "Mock desde la serverless. Cableado OK." }],
-                    role: "model",
-                },
-                finishReason: "STOP",
-            },
-        ],
-        usageMetadata : {
-            promptTokenCount: 10,
-            candidatesTokenCount: 10,
-            totalTokenCount: 20,
-        },
+    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+    const model = genAI.getGenerativeModel({
+        model: "gemini-flash-lite-latest",
+        systemInstruction,
+        generationConfig,
     });
-    
+
+    const result = await model.generateContent({contents});
+
     } catch (error) {
         console.error("Error en api/chat:", error);
         return res.status(500).json({ error: "Error interno del servidor" })
