@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/Mattzap97/Proyecto-M3-Mateo-Zapata/issues"
   },
-  "homepage": "https://github.com/Mattzap97/Proyecto-M3-Mateo-Zapata#readme"
+  "homepage": "https://github.com/Mattzap97/Proyecto-M3-Mateo-Zapata#readme",
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1"
+  }
 }
