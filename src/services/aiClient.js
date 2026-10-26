@@ -1,6 +1,10 @@
-import { send as sendToMock } from "./mockLucyApi.js";
+//import { send as sendToMock } from "./mockLucyApi.js";
 import { LUCY_HEARTFILIA_SYSTEM_PROMPT } from "./prompts.js";
 import { buildPayload, normalizeAIResponse, getTrimmedHistory } from "../transform/chatPayload.js";
+import { fetchJson } from "./fetchJson.js";
+
+const CHAT_ENDPOINT = "/api/chat";
+
 
 
 export async function getCharacterReply(uiMessages) {
@@ -13,10 +17,26 @@ export async function getCharacterReply(uiMessages) {
         uiMessages: trimmed,
     })
 
-    //3. LLAMAR AL MOCK (FETCH A api/chat.js)
-    const rawResponse = await sendToMock(payload);
+    //3. LLAMAR A SERVERLESS FUNCTION
+    let rawResponse;
+    try {
+        rawResponse = await fetchJson(CHAT_ENDPOINT, {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify(payload),
+        });
+        
+    } catch (error) {
+        if(error.status === 429 && error.body?.retryAfterSeconds) {
+            error.retryAfterSeconds = error.body.retryAfterSeconds;
+        }
 
-    //4. NOTMALIZAR LA RESPUESTA A STRING LIMPIO
+        throw error;
+
+        
+    }  
+
+    //4. NORMALIZAR LA RESPUESTA A STRING LIMPIO
     const text = normalizeAIResponse(rawResponse);
 
     const usage = rawResponse?.usageMetadata;
