@@ -34,7 +34,7 @@ const characters = {
 };
 
 const selectedCharacter = sessionStorage.getItem("selectedCharacter");
-const initialCharacter = characters[selectedCharacter] ? selectedCharacter : "lucy";
+const initialCharacter = characters[selectedCharacter] ? selectedCharacter : "Lucy";
 
 
 
