@@ -33,10 +33,52 @@ const characters = {
     },
 };
 
+/*==============================================================================================================================================
+                        FUNCIÓN QUE PERMITE RECUPERAR EL HISTORIAL DE CONVERSACIÓN GUARDADO EN EL CHAT DEL PERSONAJE
+================================================================================================================================================*/
+
+function getConversation(characterId) {
+    const saved = localStorage.item(`chatHistory_${characterId}`);
+
+    if(saved) {
+
+        try {
+            
+            const messages = JSON.parse(saved);
+
+            if(Array.isArray(messages)) {
+                return messages;
+            }
+
+        } catch (error) {
+            console.error("Error al recuperar el historial:", error);
+        }
+    }
+
+    return [{
+        role: "character",
+        text: characters[characterId].greeting,
+    }];
+}
+
+
+/*================================================================================================================================================
+                                        FUNCIÓN QUE GUARDA LOS MENSAJES DEL PERSONAJE EN EL NAVEGADOR
+==================================================================================================================================================*/
+
+function saveConversation(characterId, messages) {
+
+    localStorage.setItem(
+        `chatHistory_${characterId}`,
+        JSON.stringify(messages),
+
+    );
+}
+
+
+
 const selectedCharacter = sessionStorage.getItem("selectedCharacter");
 const initialCharacter = characters[selectedCharacter] ? selectedCharacter : "Lucy";
-
-
 
 const state = {
 
