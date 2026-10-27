@@ -38,7 +38,7 @@ const characters = {
 ================================================================================================================================================*/
 
 function getConversation(characterId) {
-    const saved = localStorage.item(`chatHistory_${characterId}`);
+    const saved = localStorage.getItem(`chatHistory_${characterId}`);
 
     if(saved) {
 
