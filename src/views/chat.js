@@ -128,6 +128,7 @@ export function renderChat () {
             <header class="chatHeader">
                 <h1 class="chatHeader__title">Chat con ${characters[state.character].name}</h1>
                 <p class="chatHeader__subtitle">${characters[state.character].subtitle}</p>
+                <button class ="chatHeader__clear" id="clearHistory" type="button">Borrar Historial</button>
             </header>
 
             <main class="chatMessages" id="chatMessages" aria-live="polite">
@@ -213,6 +214,8 @@ function setupChat () {
     const $form = document.querySelector("#chatComposer");
     const $input = document.querySelector("#chatInput");
     const $retry = document.querySelector("#retryBtn");
+    const $clearHistory = document.querySelector("#clearHistory");
+
 
     const debouncedSend = debounce(async () => {
         if(state.status === "loading") return;
@@ -239,8 +242,31 @@ function setupChat () {
         }
     })
 
-
     $input.focus();
+
+//CÓDIGO PARA EL FUNCIONAMIENTO DEL BOTÓN PARA BORRAR HISTORIAL DE CONVERSACIÓN EN EL CHAT
+    $clearHistory?.addEventListener("click", () => {
+        const confirmed = window.confirm(
+            `¿Quieres borrar la conversación de ${characters[state.character].name}?`
+        );
+
+        if (!confirmed) return;
+
+        localStorage.removeItem(`chatHistory_${state.character}`);
+
+        state.messages = [{
+            role: "character",
+            text: characters[state.character].greeting,
+        }];
+
+        state.status = "idle";
+        state.error = null;
+        state.lastUserMessage = null;
+        state.retryCountdown = null;
+
+        renderChat();
+
+    });
 }
 
 
