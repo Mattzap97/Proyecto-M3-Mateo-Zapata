@@ -274,3 +274,101 @@
     --chat-background: #ecfeff;
 }
 
+
+
+/*==============================================================================================================================================================
+                                                    ENCABEZADOS PERSONALIZADOS POR PERSONAJE
+============================================================================================================================================================ */
+
+.chatApp--lucy .chatHeader {
+    background: linear-gradient(135deg, #eff6ff, #ffffff);
+    border-bottom-color: #bfdbfe;
+}
+
+.chatApp--natsu .chatHeader {
+    background: linear-gradient(135deg, #fee2e2, #fff7ed);
+    border-bottom-color: #fed7aa;
+}
+
+.chatApp--happy .chatHeader {
+    background: linear-gradient(135deg, #cffafe, #ffffff);
+    border-bottom-color: #a5f3fc;
+}
+
+/* Títulos */
+.chatApp--lucy .chatHeader__title {
+    color: #1d4ed8;
+}
+
+.chatApp--natsu .chatHeader__title {
+    color: #b91c1c;
+}
+
+.chatApp--happy .chatHeader__title {
+    color: #0e7490;
+}
+
+/* Botón para borrar el historial */
+.chatHeader__clear {
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.chatApp--lucy .chatHeader__clear {
+    border-color: #2563eb;
+}
+
+.chatApp--natsu .chatHeader__clear {
+    border-color: #dc2626;
+}
+
+.chatApp--happy .chatHeader__clear {
+    border-color: #0891b2;
+}
+
+/* Mensajes del personaje */
+.chatApp--lucy .message--character {
+    border-color: #dbeafe;
+    border-bottom-left-radius: 0.3rem;
+}
+
+.chatApp--natsu .message--character {
+    border-color: #fed7aa;
+    border-bottom-left-radius: 0.3rem;
+}
+
+.chatApp--happy .message--character {
+    border-color: #a5f3fc;
+    border-bottom-left-radius: 0.3rem;
+}
+
+/* Transiciones para dispositivos con cursor */
+@media (hover: hover) {
+    .chatHeader__clear:hover {
+        transform: translateY(-1px);
+    }
+
+    .chatApp--lucy .chatHeader__clear:hover {
+        color: #ffffff;
+        background: #2563eb;
+    }
+
+    .chatApp--natsu .chatHeader__clear:hover {
+        color: #ffffff;
+        background: #dc2626;
+    }
+
+    .chatApp--happy .chatHeader__clear:hover {
+        color: #ffffff;
+        background: #0891b2;
+    }
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .chatHeader__clear {
+        transition: none;
+    }
+}
