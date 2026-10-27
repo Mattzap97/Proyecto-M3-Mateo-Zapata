@@ -150,10 +150,23 @@
     border: 1px solid #fecaca;
 }
 
+
 .message--typing {
-    color: var(--chat-muted);
+    display: inline-flex;
+    align-items: center;
+    align-self: flex-start;
+    gap: 0.4rem;
+
+    width: fit-content;
+    max-width: 85%;
+    padding: 0.5rem 0.8rem;
+
+    color: #ffffff;
+    font-size: 0.875rem;
+    line-height: 1.4;
     font-style: italic;
 }
+
 
 /* Campo para escribir */
 .chatComposer {
