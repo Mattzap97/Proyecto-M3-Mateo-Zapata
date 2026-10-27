@@ -268,9 +268,6 @@ function renderStatus () {
             <div class="message message--character message--typing">
                 <span>${characters[state.character].name} está escribiendo...</span>
                 <span class="typingDots" aria-label="Escribiendo"
-                    <span></span>
-                    <span></span>
-                    <span></span>
                 </span>
             <div>
         `;
