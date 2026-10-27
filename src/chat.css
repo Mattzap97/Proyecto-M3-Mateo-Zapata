@@ -165,6 +165,8 @@
     font-size: 0.875rem;
     line-height: 1.4;
     font-style: italic;
+    opacity: 0.7;
+    animation: typing-pulse 1.2s ease-in-out infinite;
 }
 
 

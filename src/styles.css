@@ -244,11 +244,6 @@ body {
                                                 DISEÑOS PARA ESTADOS DEL CHAT
 ========================================================================================================================================================*/
 
-.message--typing {
-    font-style: italic;
-    opacity: 0.7;
-    animation: typing-pulse 1.2s ease-in-out infinite;
-}
 
 @keyframes typing-pulse {
     0%, 100% { opacity: 0.4; }
