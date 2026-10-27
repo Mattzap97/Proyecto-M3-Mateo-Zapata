@@ -60,6 +60,15 @@
     background: var(--chat-background);
 }
 
+/* Identidad visual de cada personaje */
+.chatApp:has(.chatHeader__title) {
+    --chat-accent: #2563eb;
+}
+
+.chatApp:has(.chatHeader__title) {
+    --chat-accent-soft: #dbeafe;
+}
+
 /* Encabezado */
 .chatHeader {
     padding: 1rem;
@@ -241,3 +250,27 @@
         max-width: 70%;
     }
 }
+
+
+
+/* Lucy: magia celestial */
+.chatApp--lucy {
+    --chat-accent: #2563eb;
+    --chat-accent-soft: #dbeafe;
+    --chat-background: #eff6ff;
+}
+
+/* Natsu: fuego y energía */
+.chatApp--natsu {
+    --chat-accent: #dc2626;
+    --chat-accent-soft: #ffedd5;
+    --chat-background: #fff7ed;
+}
+
+/* Happy: alegría y cielo */
+.chatApp--happy {
+    --chat-accent: #0891b2;
+    --chat-accent-soft: #cffafe;
+    --chat-background: #ecfeff;
+}
+

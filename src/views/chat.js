@@ -206,7 +206,7 @@ export function renderChat () {
 }
 
     app.innerHTML = `
-        <div class="chatApp">
+        <div class="chatApp chatApp--${state.character.toLowerCase()}">
             <header class="chatHeader">
                 <h1 class="chatHeader__title">Chat con ${characters[state.character].name}</h1>
                 <p class="chatHeader__subtitle">${characters[state.character].subtitle}</p>
