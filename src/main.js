@@ -20,13 +20,3 @@ window.addEventListener("popstate", router);
 router();
 
 
-
-
-
-setupLinkInterception();
-
-window.addEventListener("popstate", router);
-
-router();
-
-
