@@ -214,7 +214,8 @@ function setupChat () {
     const $form = document.querySelector("#chatComposer");
     const $input = document.querySelector("#chatInput");
     const $retry = document.querySelector("#retryBtn");
-    const $clearHistory = document.querySelector("#clearHistory");
+    const $clearHistory = document.querySelector("#clearHistory"); //IMPORTAR BOTÓN PARA ELIMINAR HISTORIAL
+    
 
 
     const debouncedSend = debounce(async () => {
