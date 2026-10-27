@@ -66,8 +66,8 @@ export function renderChat () {
     app.innerHTML = `
         <div class="chatApp">
             <header class="chatHeader">
-                <h1 class="chatHeader__title">Chat</h1>
-                <p class="chatHeader__subtitle">Con Lucy Heartfilia, miembro de Fairy Tail</p>
+                <h1 class="chatHeader__title">Chat con ${characters[state.character].name}</h1>
+                <p class="chatHeader__subtitle">${characters[state.character].subtitle}</p>
             </header>
 
             <main class="chatMessages" id="chatMessages" aria-live="polite">
@@ -195,15 +195,10 @@ async function sendMessage(text, isRetry = false) {
     })
 
     try {
-            const prompts = {
-                Lucy: LUCY_HEARTFILIA_SYSTEM_PROMPT,
-                Natsu: NATSU_DRAGNEEL_SYSTEM_PROMPT,
-                Happy: HAPPY_SYSTEM_PROMPT,
-            };
-            
+
             const reply = await getCharacterReply(
                 nextMessages,
-                prompts[state.character]
+                characters[state.character].prompt
             );
             setState({
             messages: [... nextMessages, { role: "character", text: reply }],
@@ -224,15 +219,9 @@ async function sendMessage(text, isRetry = false) {
                 try {
                     setState({ status: "loading", retryCountdown: null });
 
-                    const prompts = {
-                        Lucy: LUCY_HEARTFILIA_SYSTEM_PROMPT,
-                        Natsu: NATSU_DRAGNEEL_SYSTEM_PROMPT,
-                        Happy: HAPPY_SYSTEM_PROMPT,
-                    };
-
                     const reply = await getCharacterReply(
                         nextMessages,
-                        prompts[state.character]
+                        characters[state.character].prompt
                     );
                     
                     setState({
