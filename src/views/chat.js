@@ -3,10 +3,19 @@ import { debounce } from "../services/debounce.js";
 import { wait } from "../services/debounce.js";
 import { getUserMessage } from "../ui/messages.js";
 
+import {
+    LUCY_HEARTFILIA_SYSTEM_PROMPT,
+    NATSU_DRAGNEEL_SYSTEM_PROMPT,
+    HAPPY_SYSTEM_PROMPT,
+} from "../services/prompts.js";
+
+
 const state = {
 
+    character: "Lucy",
     status: "idle",    // 'idle', 'loading', 'error'
-    messages: [{ role: "character",
+    messages: [{ 
+        role: "character",
         text: "Hola! soy Lucy. ¿De qué te gustaría hablar?"
     }],
     error: null,
@@ -158,7 +167,16 @@ async function sendMessage(text, isRetry = false) {
     })
 
     try {
-            const reply = await getCharacterReply(nextMessages);
+            const prompts = {
+                Lucy: LUCY_HEARTFILIA_SYSTEM_PROMPT,
+                Natsu: NATSU_DRAGNEEL_SYSTEM_PROMPT,
+                Happy: HAPPY_SYSTEM_PROMPT,
+            };
+            
+            const reply = await getCharacterReply(
+                nextMessages,
+                prompts[state.character]
+            );
             setState({
             messages: [... nextMessages, { role: "character", text: reply }],
             status: "idle",
@@ -177,7 +195,18 @@ async function sendMessage(text, isRetry = false) {
 
                 try {
                     setState({ status: "loading", retryCountdown: null });
-                    const reply = await getCharacterReply(nextMessages);
+
+                    const prompts = {
+                        Lucy: LUCY_HEARTFILIA_SYSTEM_PROMPT,
+                        Natsu: NATSU_DRAGNEEL_SYSTEM_PROMPT,
+                        Happy: HAPPY_SYSTEM_PROMPT,
+                    };
+
+                    const reply = await getCharacterReply(
+                        nextMessages,
+                        prompts[state.character]
+                    );
+                    
                     setState({
                         messages: [...nextMessages, { role: "character", text: reply }],
                         status: "idle",
