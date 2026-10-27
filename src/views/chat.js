@@ -38,7 +38,7 @@ const characters = {
 ================================================================================================================================================*/
 
 function getConversation(characterId) {
-    const saved = localStorage.getItem(`chatHistory_${characterId}`);
+    const saved = sessionStorage.getItem(`chatHistory_${characterId}`);
 
     if(saved) {
 
@@ -68,7 +68,7 @@ function getConversation(characterId) {
 
 function saveConversation(characterId, messages) {
 
-    localStorage.setItem(
+    sessionStorage.setItem(
         `chatHistory_${characterId}`,
         JSON.stringify(messages),
 
@@ -215,7 +215,7 @@ function setupChat () {
     const $input = document.querySelector("#chatInput");
     const $retry = document.querySelector("#retryBtn");
     const $clearHistory = document.querySelector("#clearHistory"); //IMPORTAR BOTÓN PARA ELIMINAR HISTORIAL
-    
+
 
 
     const debouncedSend = debounce(async () => {
@@ -253,7 +253,7 @@ function setupChat () {
 
         if (!confirmed) return;
 
-        localStorage.removeItem(`chatHistory_${state.character}`);
+        sessionStorage.removeItem(`chatHistory_${state.character}`);
 
         state.messages = [{
             role: "character",
