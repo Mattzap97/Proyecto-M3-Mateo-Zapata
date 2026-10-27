@@ -1,0 +1,243 @@
+/*==================================================================================================================================================
+                                            DISEÑO PARA CHAT COMPOSER (INPUT Y BOTÓN)
+====================================================================================================================================================*/
+
+.chatComposer__input {
+    flex: 1;
+    min-width: 0;
+    padding: 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.75rem;
+    outline: none;
+}
+
+.chatComposer__input:focus {
+    border-color: #111827;
+}
+
+.chatComposer__send {
+    padding: 0.75rem 1rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #ffffff;
+    background: #111827;
+    border: 0;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.chatComposer__send:hover {
+    background: #374151;
+}
+
+
+
+
+/*===================================================================================================================================================
+                                                CHAT — ESTILOS BASE MOBILE FIRST
+=============================================================================================================================================== */
+
+.chatApp {
+    --chat-accent: #2563eb;
+    --chat-accent-soft: #dbeafe;
+    --chat-surface: #ffffff;
+    --chat-background: #f3f6fb;
+    --chat-text: #111827;
+    --chat-muted: #6b7280;
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: calc(100vh - 56px);
+    height: calc(100dvh - 56px);
+    min-height: 400px;
+    overflow: hidden;
+    color: var(--chat-text);
+    background: var(--chat-background);
+}
+
+/* Encabezado */
+.chatHeader {
+    padding: 1rem;
+    background: var(--chat-surface);
+    border-bottom: 1px solid #e5e7eb;
+    box-shadow: 0 2px 8px rgb(17 24 39 / 4%);
+}
+
+.chatHeader__title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.chatHeader__subtitle {
+    margin-top: 0.25rem;
+    color: var(--chat-muted);
+    font-size: 0.875rem;
+    line-height: 1.5;
+}
+
+.chatHeader__clear {
+    margin-top: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    color: var(--chat-accent);
+    background: transparent;
+    border: 1px solid var(--chat-accent);
+    border-radius: 0.65rem;
+    font: inherit;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+
+/* Área de conversación */
+.chatMessages {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 0.85rem;
+    min-height: 0;
+    overflow-y: auto;
+    padding: 1rem;
+    overscroll-behavior-y: contain;
+    scroll-behavior: smooth;
+}
+
+/* Burbujas */
+.message {
+    max-width: 88%;
+    padding: 0.8rem 1rem;
+    border-radius: 1rem;
+    line-height: 1.55;
+    overflow-wrap: anywhere;
+    white-space: pre-wrap;
+    box-shadow: 0 2px 6px rgb(17 24 39 / 5%);
+}
+
+.message--character {
+    align-self: flex-start;
+    color: var(--chat-text);
+    background: var(--chat-surface);
+    border: 1px solid #e5e7eb;
+    border-bottom-left-radius: 0.3rem;
+}
+
+.message--user {
+    align-self: flex-end;
+    color: #ffffff;
+    background: var(--chat-accent);
+    border: 1px solid transparent;
+    border-bottom-right-radius: 0.3rem;
+}
+
+.message--error {
+    align-self: center;
+    max-width: 100%;
+    color: #991b1b;
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+}
+
+.message--typing {
+    color: var(--chat-muted);
+    font-style: italic;
+}
+
+/* Campo para escribir */
+.chatComposer {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem;
+    background: var(--chat-surface);
+    border-top: 1px solid #e5e7eb;
+    padding-bottom: max(0.75rem, env(safe-area-inset-bottom));
+}
+
+.chatComposer__input {
+    flex: 1;
+    min-width: 0;
+    min-height: 44px;
+    padding: 0.75rem 0.9rem;
+    color: var(--chat-text);
+    background: #f9fafb;
+    border: 1px solid #d1d5db;
+    border-radius: 0.8rem;
+    font: inherit;
+    font-size: 1rem;
+}
+
+.chatComposer__input:focus {
+    outline: 2px solid var(--chat-accent);
+    outline-offset: 2px;
+    border-color: var(--chat-accent);
+}
+
+.chatComposer__send {
+    min-height: 44px;
+    padding: 0.75rem 1rem;
+    color: #ffffff;
+    background: var(--chat-accent);
+    border: 0;
+    border-radius: 0.8rem;
+    font: inherit;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.chatComposer__send:disabled,
+.chatHeader__clear:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+    .chatApp {
+        height: calc(100dvh - 64px);
+        min-height: 500px;
+        max-width: 900px;
+        margin: 0 auto;
+        border: 1px solid #e5e7eb;
+        border-radius: 1rem;
+        box-shadow: 0 8px 28px rgb(17 24 39 / 8%);
+    }
+
+    .chatHeader {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .chatMessages {
+        padding: 1.5rem;
+    }
+
+    .chatComposer {
+        padding: 1rem 1.25rem;
+    }
+
+    .message {
+        max-width: 75%;
+    }
+}
+
+/* Escritorio */
+@media (min-width: 1024px) {
+    .chatApp {
+        max-width: 1000px;
+    }
+
+    .chatHeader__title {
+        font-size: 1.4rem;
+    }
+
+    .chatMessages {
+        gap: 1rem;
+    }
+
+    .message {
+        max-width: 70%;
+    }
+}

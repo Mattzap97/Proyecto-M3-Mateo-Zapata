@@ -55,116 +55,6 @@ body {
     background: #f9fafb;
 }
 
-/*========================================================================================================================================
-                                        LAYOUT PRINCIPAL DEL CHAT ( MOBILE - FIRST )
-==========================================================================================================================================*/
-
-.chatApp {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    background: #ffffff;
-}
-
-.chatHeader {
-    padding: 1rem;
-    border-bottom: 1px solid #e5e7eb;
-    background: #ffffff;
-}
-
-.chatHeader__title {
-    font-size: 1.25rem;
-    font-weight: 600;
-}
-
-.chatHeader__subtitle {
-    font-size: 0.875rem;
-    color: #6b7280;
-}
-
-.chatMessages {
-    flex: 1;
-    overflow: auto;
-    padding: 1rem;
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    overscroll-behavior-y: contain;
-}
-
-.chatComposer {
-    display: flex;
-    gap: 0.5rem;
-    padding: 0.75rem;
-    border-top: 1px solid #e5e7eb;
-    background: #ffffff;
-}
-
-
-/*===============================================================================================================================================
-                                            DISEÑO DE BURBUJAS QUE CONTIENEN LOS MENSAJES
-=================================================================================================================================================*/
-
-.message {
-    max-width: 85%;
-    padding: 0.75rem 1rem;
-    border-radius: 1rem;
-    word-wrap: break-word;
-}
-
-.message--character {
-    align-self: flex-start;
-    background: #aa1165;
-    color: #ffffff;
-    border: 1px solid #e5e7eb;
-}
-
-.message--user {
-    align-self: flex-end;
-    background: #111827;
-    color: #ffffff; 
-}
-
-
-/*==================================================================================================================================================
-                                            DISEÑO PARA CHAT COMPOSER (INPUT Y BOTÓN)
-====================================================================================================================================================*/
-
-.chatComposer__input {
-    flex: 1;
-    min-width: 0;
-    padding: 0.75rem;
-    font-family: inherit;
-    font-size: 1rem;
-    border: 1px solid #d1d5db;
-    border-radius: 0.75rem;
-    outline: none;
-}
-
-.chatComposer__input:focus {
-    border-color: #111827;
-}
-
-.chatComposer__send {
-    padding: 0.75rem 1rem;
-    font-family: inherit;
-    font-size: 1rem;
-    font-weight: 500;
-    color: #ffffff;
-    background: #111827;
-    border: 0;
-    border-radius: 0.75rem;
-    cursor: pointer;
-    white-space: nowrap;
-}
-
-.chatComposer__send:hover {
-    background: #374151;
-}
-
-
-
-
 
 /*================================================================================================================================================================
                                                     MEDIA QUERIES PARA TABLETS
@@ -420,13 +310,9 @@ body {
 
 
 
-
-
-
-
-/* ==========================================================
-    CHAT: GALERÍA DE PERSONAJES — MOBILE FIRST
-========================================================== */
+/*=============================================================================================================================================================
+                                                        CHAT: GALERÍA DE PERSONAJES — MOBILE FIRST
+============================================================================================================================================================= */
 
 
 /* CHAT: galería mobile first */
