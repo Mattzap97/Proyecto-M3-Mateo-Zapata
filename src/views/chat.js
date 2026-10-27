@@ -65,18 +65,21 @@ export function renderChat () {
 
     const selectedCharacter = sessionStorage.getItem("selectedCharacter");
 
-    if (selectedCharacter && characters[selectedCharacter]) {
+    if (
+        selectedCharacter &&
+        characters[selectedCharacter] &&
+        selectedCharacter !== state.character
+    ) {
         state.character = selectedCharacter;
         state.messages = [{
             role: "character",
             text: characters[selectedCharacter].greeting,
         }];
-
         state.status = "idle";
         state.error = null;
         state.lastUserMessage = null;
         state.retryCountdown = null;
-    }
+}
 
     app.innerHTML = `
         <div class="chatApp">
