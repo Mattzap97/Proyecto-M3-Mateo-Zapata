@@ -379,31 +379,24 @@
                                                                         BURBUJAS OSCURAS POR PERSONAJE
 ========================================================================================================================================================== */
 
-/* Lucy: azul celestial oscuro */
+
+/* Lucy: azul más suave */
 .chatApp--lucy .message--character {
     color: #ffffff;
-    background: #1e3a8a;
-    border: 1px solid #3b82f6;
+    background: #3b5998;
+    border: 1px solid #dbeafe;
 }
 
-/* Natsu: rojo fuego oscuro */
+/* Natsu: rojo fuego más suave */
 .chatApp--natsu .message--character {
     color: #ffffff;
-    background: #7f1d1d;
-    border: 1px solid #dc2626;
+    background: #a33b3b;
+    border: 1px solid #fed7aa;
 }
 
-/* Happy: azul turquesa oscuro */
+/* Happy: turquesa más suave */
 .chatApp--happy .message--character {
     color: #ffffff;
-    background: #164e63;
-    border: 1px solid #0891b2;
-}
-
-/* El usuario conserva el fondo oscuro original */
-.chatApp .message--user {
-    color: #ffffff;
-    background: #111827;
-    border: 1px solid #374151;
-    border-bottom-right-radius: 0.3rem;
+    background: #286477;
+    border: 1px solid #a5f3fc;
 }
