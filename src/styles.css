@@ -319,6 +319,24 @@ body {
     cursor: pointer;
 }
 
-.message__retry:hover{
+.message__retry:hover {
     background: #991b1b;
+}
+
+
+.chatHeader__clear {
+    margin-top: 0.75rem;
+    padding: 0.5rem 0.85rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.5rem;
+    background: #ffffff;
+    color: #991b1b;
+    font: inherit;
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+
+.chatHeader__clear {
+    background: #fee2e2;
+    border-color: #fca5a5;
 }
