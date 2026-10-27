@@ -43,6 +43,8 @@ export function renderChat () {
                     class="chatComposer__input"
                     id="chatInput"
                     type="text"
+                    autocomplete="off"
+                    spellcheck="false"
                     placeholder="Escribe un mensaje..."
                     aria-label="Escribe tu mensaje"
                     ${state.status === "loading" ? "disabled" : ""}
