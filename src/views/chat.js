@@ -63,6 +63,21 @@ function setState(updates) {
 export function renderChat () {
     const app = document.querySelector("#app");
 
+    const selectedCharacter = sessionStorage.getItem("selectedCharacter");
+
+    if (selectedCharacter && characters[selectedCharacter]) {
+        state.character = selectedCharacter;
+        state.messages = [{
+            role: "character",
+            text: characters[selectedCharacter].greeting,
+        }];
+
+        state.status = "idle";
+        state.error = null;
+        state.lastUserMessage = null;
+        state.retryCountdown = null;
+    }
+
     app.innerHTML = `
         <div class="chatApp">
             <header class="chatHeader">
