@@ -4,21 +4,21 @@ export function renderHome () {
 
     const characters = [
         {
-            id: "lucy",
+            id: "Lucy",
             name: "Lucy Heartfilia",
             description: "Talentosa maga celestial de Fairy Tail que destaca por su gran empatía e inteligencia.",
             image: "./src/Documentacion/assets/Lucy.jpeg",
             button: "Chatear con Lucy",
         },
         {
-            id: "natsu",
+            id: "Natsu",
             name: "Natsu Dragneel",
             description: "Valiente Dragon Slayer de fuego, enérgico, impulsivo y siempre dispuesto a proteger a sus amigos.",
             image: "./src/Documentacion/assets/Natsu.jpeg",
             button: "Chatear con Natsu",
         },
         {
-            id: "happy",
+            id: "Happy",
             name: "Happy",
             description: "Alegre gato azul alado, bromista y fiel compañero de Natsu, ¡siempre dispuesto a una aventura!",
             image: "./src/Documentacion/assets/Happy.jpeg",

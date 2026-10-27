@@ -10,13 +10,41 @@ import {
 } from "../services/prompts.js";
 
 
+
+
+const characters = {
+    Lucy: {
+        name: "Lucy Heartfilia",
+        subtitle: "Maga celestial y miembro de Fairy Tail",
+        greeting: "¡Hola! Soy Lucy. ¿De qué te gustaría hablar?",
+        prompt: LUCY_HEARTFILIA_SYSTEM_PROMPT,
+    },
+    Natsu: {
+        name: "Natsu Dragneel",
+        subtitle: "Dragon Slayer de fuego y miembro de Fairy Tail",
+        greeting: "¡Hey! Soy Natsu. ¿Listo para una aventura?",
+        prompt: NATSU_DRAGNEEL_SYSTEM_PROMPT,
+    },
+    Happy: {
+        name: "Happy",
+        subtitle: "Gato/Exceed azul alado y compañero de Natsu",
+        greeting: "¡Aye! Soy Happy. ¿Trajiste pescado?",
+        prompt: HAPPY_SYSTEM_PROMPT,
+    },
+};
+
+const selectedCharacter = sessionStorage.getItem("selectedCharacter");
+const initialCharacter = characters[selectedCharacter] ? selectedCharacter : "lucy";
+
+
+
 const state = {
 
-    character: "Lucy",
+    character: initialCharacter,
     status: "idle",    // 'idle', 'loading', 'error'
     messages: [{ 
         role: "character",
-        text: "Hola! soy Lucy. ¿De qué te gustaría hablar?"
+        text: characters[initialCharacter].greeting,
     }],
     error: null,
     lastUserMessage: null,
