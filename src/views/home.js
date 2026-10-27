@@ -1,68 +1,25 @@
 
-export function renderHome () {
+export function renderHome() {
     const app = document.querySelector("#app");
 
-    const characters = [
-        {
-            id: "Lucy",
-            name: "Lucy Heartfilia",
-            description: "Talentosa maga celestial de Fairy Tail que destaca por su gran empatía e inteligencia.",
-            image: "./src/Documentacion/assets/Lucy.jpeg",
-            button: "Chatear con Lucy",
-        },
-        {
-            id: "Natsu",
-            name: "Natsu Dragneel",
-            description: "Valiente Dragon Slayer de fuego, enérgico, impulsivo y siempre dispuesto a proteger a sus amigos.",
-            image: "./src/Documentacion/assets/Natsu.jpeg",
-            button: "Chatear con Natsu",
-        },
-        {
-            id: "Happy",
-            name: "Happy",
-            description: "Alegre gato azul alado, bromista y fiel compañero de Natsu, ¡siempre dispuesto a una aventura!",
-            image: "./src/Documentacion/assets/Happy.jpeg",
-            button: "Chatear con Happy",
-        },
-    ];
+    
 
     app.innerHTML = `
-        <section class="view view--home">
-            <h1>Chatea con tu personaje favorito de Fairy Tail</h1>
+        <section class="view view--welcome">
+            <div class="welcome__content">
+                <p class="welcome__eyebrow">¡El gremio te da la bienvenida!</p>
 
-            <div class="characters__grid">
-                ${characters.map((character) => `
-                    <article class="characterCard">
-                        <img
-                            class="characterCard__image"
-                            src="${character.image}"
-                            alt="${character.name}"
-                        />
+                <h1>¡Bienvenido a Fairy Tail!</h1>
 
-                        <h2>${character.name}</h2>
-                        <p>${character.description}</p>
+                <p class="welcome__description">
+                    Reúnete con tus personajes favoritos, conversa con ellos
+                    y vive nuevas aventuras dentro del gremio.
+                </p>
 
-                        <button
-                            class="btn btn--primary"
-                            type="button"
-                            data-character="${character.id}"
-                        >
-                            ${character.button}
-                        </button>
-                    </article>
-                `).join("")}
+                <a href="/chat" class="btn btn--primary">
+                    Conocer a los personajes
+                </a>
             </div>
         </section>
     `;
-
-    app.querySelectorAll("[data-character]").forEach((button) => {
-        button.addEventListener("click", () => {
-            const characterId = button.dataset.character;
-
-            sessionStorage.setItem("selectedCharacter", characterId);
-
-            window.history.pushState({}, "", "/chat");
-            window.dispatchEvent(new PopStateEvent("popstate"));
-        });
-    });
 }

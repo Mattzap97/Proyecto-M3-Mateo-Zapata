@@ -103,6 +103,88 @@ function setState(updates) {
     renderChat();
 }
     
+/*====================================================================================================================================================
+
+======================================================================================================================================================*/
+
+
+export function renderCharacterGallery() {
+    const app = document.querySelector("#app");
+
+    const charactersList = [
+        {
+            id: "Lucy",
+            name: "Lucy Heartfilia",
+            description: "Maga celestial, inteligente y empática, miembro de Fairy Tail.",
+            image: "./src/Documentacion/assets/Lucy.jpeg",
+        },
+        {
+            id: "Natsu",
+            name: "Natsu Dragneel",
+            description: "Dragon Slayer de fuego, valiente y protector de sus amigos.",
+            image: "./src/Documentacion/assets/Natsu.jpeg",
+        },
+        {
+            id: "Happy",
+            name: "Happy",
+            description: "Gato azul alado, alegre y fiel compañero de Natsu.",
+            image: "./src/Documentacion/assets/Happy.jpeg",
+        },
+    ];
+
+    app.innerHTML = `
+        <section class="view view--characters">
+            <h1>Elige con quién quieres conversar</h1>
+            <p>¡Tus compañeros de Fairy Tail te están esperando!</p>
+
+            <div class="characters__grid">
+                ${charactersList.map(character => `
+                    <article class="characterCard">
+                        <img
+                            class="characterCard__image"
+                            src="${character.image}"
+                            alt="${character.name}"
+                        />
+
+                        <h2>${character.name}</h2>
+                        <p>${character.description}</p>
+
+                        <button
+                            class="btn btn--primary"
+                            type="button"
+                            data-character="${character.id}"
+                        >
+                            Chatear con ${character.name.split(" ")[0]}
+                        </button>
+                    </article>
+                `).join("")}
+            </div>
+        </section>
+    `;
+
+    app.querySelectorAll("[data-character]").forEach(button => {
+        button.addEventListener("click", () => {
+            const characterId = button.dataset.character;
+
+            sessionStorage.setItem("selectedCharacter", characterId);
+
+            window.history.pushState(
+                {},
+                "",
+                `/chat/${characterId.toLowerCase()}`
+            );
+
+            window.dispatchEvent(new PopStateEvent("popstate"));
+        });
+    });
+}
+
+
+/*============================================================================================================================================================
+
+==============================================================================================================================================================*/
+
+
 
 
 export function renderChat () {

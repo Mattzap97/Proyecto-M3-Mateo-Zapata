@@ -2,25 +2,37 @@
                                             DISEÑO PARA LA BARRA DE NAVEGACIÓN
 ================================================================================================================================================*/
 
+/* Navegación principal: mobile first */
 .mainNav {
     display: flex;
-    gap: 1rem;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
     padding: 0.75rem 1rem;
     background: #111827;
     border-bottom: 1px solid #1f2937;
 }
 
 .mainNav__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 44px;
+    padding: 0.5rem 0.75rem;
     color: #ffffff;
     text-decoration: none;
     font-weight: 500;
-    padding: 0.25rem 0.5rem;
-    border-radius: 0.5rem;
-    transition: background 0.15s;
+    border-radius: 0.75rem;
+    transition: background 0.2s ease, color 0.2s ease;
 }
 
 .mainNav__link:hover {
     background: #1f2937;
+}
+
+.mainNav__link:focus-visible {
+    outline: 2px solid #93c5fd;
+    outline-offset: 3px;
 }
 
 *,
@@ -150,6 +162,10 @@ body {
     background: #374151;
 }
 
+
+
+
+
 /*================================================================================================================================================================
                                                     MEDIA QUERIES PARA TABLETS
 ==================================================================================================================================================================*/
@@ -171,6 +187,33 @@ body {
     .message {
         max-width: 75%;
     }
+
+    /* Galería de personajes en tablet */
+    .view--characters .characters__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    .view--characters .characterCard__image {
+        height: 220px;
+    }
+
+
+    /* Ajustes de tarjetas para tablet */
+    .view--home .characterCard {
+        height: 100%;
+    }
+
+    .view--home .characterCard__image {
+        height: 220px;
+        flex-shrink: 0;
+    }
+
+    .view--welcome {
+        min-height: calc(100vh - 60px);
+        min-height: calc(100svh - 60px);
+    }
+
 }
 
 
@@ -213,7 +256,39 @@ body {
     .message {
         max-width: 68%;
     }
+
+
+    /* Galería de personajes en escritorio */
+    .view--home {
+        max-width: 1200px;
+        padding: 2.5rem 2rem 3rem;
+    }
+
+    .view--home h1 {
+        font-size: 2.5rem;
+        max-width: 28ch;
+    }
+
+    .view--characters .characters__grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .view--characters .characterCard__image {
+        height: 240px;
+    }
+
+    .view--welcome {
+        padding: 2rem;
+    }
+
+
+    .view--welcome {
+        min-height: calc(100vh - 60px);
+        min-height: calc(100svh - 60px);
+        padding: 2rem;
+    }
 }
+
 
 
 /*=================================================================================================================================================
@@ -339,4 +414,274 @@ body {
 .chatHeader__clear {
     background: #fee2e2;
     border-color: #fca5a5;
+}
+
+
+
+
+
+
+
+
+
+/* ==========================================================
+    CHAT: GALERÍA DE PERSONAJES — MOBILE FIRST
+========================================================== */
+
+
+/* CHAT: galería mobile first */
+.view--characters {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 2rem;
+}
+
+.view--characters > h1 {
+    margin-bottom: 0.75rem;
+    color: #111827;
+    font-size: 1.65rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+.view--characters > p {
+    margin-bottom: 1.5rem;
+    color: #4b5563;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.view--characters .characters__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+    width: 100%;
+    margin: 1.5rem auto 0;
+}
+
+.view--characters .characterCard {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 1rem;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    box-shadow: 0 4px 14px rgb(17 24 39 / 6%);
+}
+
+.view--characters .characterCard__image {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 260px;
+    flex-shrink: 0;
+    margin: 0 0 1rem;
+    padding: 0;
+    object-fit: contain;
+    object-position: center;
+    background: #f3f4f6;
+    border-radius: 0.75rem;
+}
+
+.view--characters .characterCard h2 {
+    margin-bottom: 0.5rem;
+    color: #111827;
+    font-size: 1.2rem;
+}
+
+.view--characters .characterCard p {
+    flex: 1;
+    margin-bottom: 1.25rem;
+    color: #4b5563;
+    line-height: 1.6;
+}
+
+.view--characters .characterCard .btn {
+    display: block;
+    width: 100%;
+    margin-top: auto;
+    text-align: center;
+}
+
+
+
+/* Ajuste de imágenes de las tarjetas en móvil */
+.view--home .characterCard__image {
+    width: 100%;
+    max-width: none;
+    height: 260px;
+    padding-bottom: 0;
+    margin: 0 0 1rem;
+    object-fit: contain;
+    object-position: center;
+}
+
+
+
+
+/* ==================================================
+    HOME: BIENVENIDA — MOBILE FIRST
+================================================== */
+
+/* HOME: bienvenida mobile first */
+.view--welcome {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+    min-height: calc(100svh - 60px);
+    padding: 1.25rem;
+
+    background-image:
+        linear-gradient(
+            rgb(17 24 39 / 30%),
+            rgb(17 24 39 / 42%)
+        ),
+        url("./Documentacion/assets/gremioft.jpeg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.welcome__content {
+    width: 100%;
+    max-width: 680px;
+    padding: 1.5rem 1.25rem;
+
+    color: #ffffff;
+    text-align: center;
+
+    background: rgb(17 24 39 / 30%);
+    border: 1px solid rgb(255 255 255 / 35%);
+    border-radius: 1.25rem;
+    backdrop-filter: blur(2px);
+}
+
+
+.welcome__eyebrow {
+    margin-bottom: 1rem;
+    color: #fde68a;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    
+}
+
+.welcome__content h1 {
+    margin-bottom: 1rem;
+    font-size: clamp(2rem, 8vw, 3.5rem);
+    line-height: 1.1;
+}
+
+.welcome__description {
+    max-width: 48ch;
+    margin: 0 auto 1.5rem;
+    color: #ffffff;
+    line-height: 1.7;
+}
+
+.welcome__content .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 48px;
+    padding: 0.85rem 1.25rem;
+}
+
+
+
+
+
+
+
+/* HOME: ocupar todo el ancho disponible */
+#app {
+    width: 100%;
+    min-width: 0;
+}
+
+.view--welcome {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    min-height: calc(100vh - 60px);
+    min-height: calc(100svh - 60px);
+    padding: 1.5rem;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+
+
+
+/* CHAT: restaurar tarjetas verticales */
+.view--characters {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 2rem;
+}
+
+.view--characters .characters__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.25rem;
+    width: 100%;
+}
+
+.view--characters .characterCard {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    padding: 1rem;
+    background: #ffffff;
+    border: 1px solid #e5e7eb;
+    border-radius: 1rem;
+    box-shadow: 0 4px 14px rgb(17 24 39 / 6%);
+}
+
+.view--characters .characterCard__image {
+    display: block;
+    width: 100%;
+    max-width: none;
+    height: 260px;
+    margin: 0 0 1rem;
+    padding: 0;
+    object-fit: contain;
+    object-position: center;
+    background: #f3f4f6;
+    border-radius: 0.75rem;
+}
+
+.view--characters .characterCard .btn {
+    display: block;
+    width: 100%;
+    margin-top: auto;
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .view--characters .characters__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem;
+    }
+
+    .view--characters .characterCard__image {
+        height: 220px;
+    }
+}
+
+@media (min-width: 1024px) {
+    .view--characters .characters__grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+
+    .view--characters .characterCard__image {
+        height: 240px;
+    }
 }

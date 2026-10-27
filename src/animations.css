@@ -1,0 +1,122 @@
+
+/* ===============================================================================================================================================
+                                            ANIMACIONES DE BIENVENIDA — FAIRY TAIL
+=============================================================================================================================================== */
+
+
+@keyframes welcomeFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.view--welcome .welcome__eyebrow {
+    animation: welcomeFadeUp 0.6s ease-out both;
+}
+
+.view--welcome .welcome__content h1 {
+    animation: welcomeFadeUp 0.7s ease-out 0.1s both;
+}
+
+.view--welcome .welcome__description {
+    animation: welcomeFadeUp 0.7s ease-out 0.25s both;
+}
+
+.view--welcome .welcome__content .btn {
+    animation: welcomeFadeUp 0.7s ease-out 0.4s both;
+    transition:
+        transform 0.2s ease,
+        background-color 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+/* Efecto hover para computadoras */
+@media (hover: hover) {
+    .view--welcome .welcome__content .btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgb(0 0 0 / 25%);
+    }
+}
+
+/* Efecto al pulsar */
+.view--welcome .welcome__content .btn:active {
+    transform: scale(0.97);
+}
+
+/* Accesibilidad: reducir movimiento */
+@media (prefers-reduced-motion: reduce) {
+    .view--welcome .welcome__eyebrow,
+    .view--welcome .welcome__content h1,
+    .view--welcome .welcome__description,
+    .view--welcome .welcome__content .btn {
+        animation: none;
+        transition: none;
+    }
+}
+
+
+
+/* =======================================================================================================================================================
+                                                ANIMACIONES DE TARJETAS — FAIRY TAIL
+==============================================================================================================================================================*/
+
+@keyframes characterCardEnter {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.view--characters .characterCard {
+    animation: characterCardEnter 0.5s ease-out both;
+}
+
+.view--characters .characterCard:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.view--characters .characterCard:nth-child(3) {
+    animation-delay: 0.2s;
+}
+
+/* Interacciones para dispositivos con cursor */
+@media (hover: hover) and (prefers-reduced-motion: no-preference) {
+    .view--characters .characterCard {
+        transition:
+            transform 0.25s ease,
+            box-shadow 0.25s ease;
+    }
+
+    .view--characters .characterCard:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 12px 28px rgb(17 24 39 / 12%);
+    }
+
+    .view--characters .characterCard .btn:hover {
+        filter: brightness(1.15);
+    }
+}
+
+/* Respuesta visual al pulsar */
+.view--characters .characterCard .btn:active {
+    transform: scale(0.97);
+}
+
+/* Accesibilidad */
+@media (prefers-reduced-motion: reduce) {
+    .view--characters .characterCard {
+        animation: none;
+        transition: none;
+    }
+}
