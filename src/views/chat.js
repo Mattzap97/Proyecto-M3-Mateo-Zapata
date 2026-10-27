@@ -84,10 +84,7 @@ const state = {
 
     character: initialCharacter,
     status: "idle",    // 'idle', 'loading', 'error'
-    messages: [{ 
-        role: "character",
-        text: characters[initialCharacter].greeting,
-    }],
+    messages: getConversation(initialCharacter),
     error: null,
     lastUserMessage: null,
     retryCountdown: null,
@@ -98,9 +95,15 @@ const state = {
 function setState(updates) {
 
     Object.assign(state, updates);
-    renderChat();
 
+    if (updates.messages) {
+        saveConversation(state.character, state.messages);
+    }
+
+    renderChat();
 }
+    
+
 
 export function renderChat () {
     const app = document.querySelector("#app");
@@ -113,10 +116,7 @@ export function renderChat () {
         selectedCharacter !== state.character
     ) {
         state.character = selectedCharacter;
-        state.messages = [{
-            role: "character",
-            text: characters[selectedCharacter].greeting,
-        }];
+        state.messages = getConversation(selectedCharacter);
         state.status = "idle";
         state.error = null;
         state.lastUserMessage = null;
