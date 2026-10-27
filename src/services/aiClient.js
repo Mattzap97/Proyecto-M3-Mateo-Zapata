@@ -1,5 +1,10 @@
 //import { send as sendToMock } from "./mockLucyApi.js";
-import { LUCY_HEARTFILIA_SYSTEM_PROMPT } from "./prompts.js";
+import { 
+    LUCY_HEARTFILIA_SYSTEM_PROMPT,
+    NATSU_DRAGNEEL_SYSTEM_PROMPT, 
+    HAPPY_SYSTEM_PROMPT,
+} from "./prompts.js";
+
 import { buildPayload, normalizeAIResponse, getTrimmedHistory } from "../transform/chatPayload.js";
 import { fetchJson } from "./fetchJson.js";
 
@@ -7,13 +12,13 @@ const CHAT_ENDPOINT = "/api/chat";
 
 
 
-export async function getCharacterReply(uiMessages) {
+export async function getCharacterReply(uiMessages, systemPrompt = LUCY_HEARTFILIA_SYSTEM_PROMPT) {
     //1. RECORTAR HISTORIAL PARA CONTROLAR TOKENS
     const trimmed = getTrimmedHistory(uiMessages);
 
     //2. CONSTRUIR PAYLOAD CON SHAPE DE GEMINI
     const payload = buildPayload({
-        systemPrompt: LUCY_HEARTFILIA_SYSTEM_PROMPT,
+        systemPrompt,
         uiMessages: trimmed,
     })
 
