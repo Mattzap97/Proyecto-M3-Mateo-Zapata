@@ -456,3 +456,48 @@
     font-style: normal;
     box-sizing: border-box;
 }
+
+
+
+
+/* ===== MEJORA GENERAL DEL CHAT ===== */
+
+.chatApp {
+    background: var(--chat-background, #f8fafc);
+}
+
+/* Encabezado */
+.chatApp .chatHeader {
+    padding: 1.25rem 1.5rem;
+    background: #ffffff;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 2px 8px rgb(15 23 42 / 5%);
+}
+
+.chatApp .chatHeader__title {
+    margin: 0 0 0.35rem;
+    font-size: 1.35rem;
+    line-height: 1.4;
+    color: var(--chat-accent, #334155);
+}
+
+.chatApp .chatHeader__subtitle {
+    margin: 0 0 1rem;
+    color: #64748b;
+    line-height: 1.5;
+}
+
+/* Área de conversación */
+.chatApp .chatMessages {
+    padding: 1.25rem;
+    gap: 1rem;
+    background: var(--chat-background, #f8fafc);
+}
+
+/* Área para escribir */
+.chatApp .chatComposer {
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: #ffffff;
+    border-top: 1px solid #e2e8f0;
+}
