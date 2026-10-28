@@ -548,3 +548,63 @@
         gap: 0.7rem;
     }
 }
+
+
+
+/* ================================================================================================================================================== 
+                                                                    ENCABEZADO Y BARRA DE ESCRITURA
+================================================================================================================================================= */
+
+/* Encabezado de Lucy */
+.chatApp--lucy .chatHeader,
+.chatApp--lucy .chatComposer {
+    background: #3b5998;
+    color: #ffffff;
+}
+
+/* Encabezado de Natsu */
+.chatApp--natsu .chatHeader,
+.chatApp--natsu .chatComposer {
+    background: #a33b3b;
+    color: #ffffff;
+}
+
+/* Encabezado de Happy */
+.chatApp--happy .chatHeader,
+.chatApp--happy .chatComposer {
+    background: #286477;
+    color: #ffffff;
+}
+
+/* Texto del encabezado */
+.chatApp .chatHeader__title,
+.chatApp .chatHeader__subtitle {
+    color: #ffffff;
+}
+
+/* Campo de escritura */
+.chatApp .chatComposer input,
+.chatApp .chatComposer textarea {
+    color: #ffffff;
+    background: rgb(0 0 0 / 18%);
+    border: 1px solid rgb(255 255 255 / 45%);
+}
+
+/* Texto de ayuda dentro del campo */
+.chatApp .chatComposer input::placeholder,
+.chatApp .chatComposer textarea::placeholder {
+    color: rgb(255 255 255 / 75%);
+}
+
+/* Botón de enviar */
+.chatApp .chatComposer button {
+    color: #ffffff;
+    background: rgb(0 0 0 / 25%);
+    border: 1px solid rgb(255 255 255 / 35%);
+}
+
+/* Separación y bordes */
+.chatApp .chatHeader,
+.chatApp .chatComposer {
+    border-color: rgb(255 255 255 / 20%);
+}
