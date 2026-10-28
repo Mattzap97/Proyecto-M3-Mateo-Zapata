@@ -443,9 +443,15 @@ body {
 /* CHAT: restaurar tarjetas verticales */
 .view--characters {
     width: 100%;
-    max-width: 1200px;
+    max-width: none;
     margin: 0 auto;
     padding: 1.5rem 1rem 2rem;
+
+    background-image: url("./Documentacion/assets/gremiofairy.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
 }
 
 .view--characters .characters__grid {
@@ -637,4 +643,3 @@ body {
         padding: 2rem;
     }
 }
-
