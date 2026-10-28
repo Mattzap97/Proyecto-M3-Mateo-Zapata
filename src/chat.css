@@ -117,7 +117,7 @@
 
 /* Burbujas */
 .message {
-    max-width: 88%;
+    max-width: 85%;
     padding: 0.8rem 1rem;
     border-radius: 1rem;
     line-height: 1.55;
@@ -442,4 +442,17 @@
     color: #ffffff;
     background: #286477;
     border: 1px solid #a5f3fc;
+}
+
+
+.chatApp .message--typing {
+    display: block;
+    width: fit-content;
+    max-width: 85%;
+    min-height: auto;
+    padding: 0.75rem 1rem;
+    font-size: inherit;
+    line-height: normal;
+    font-style: normal;
+    box-sizing: border-box;
 }
