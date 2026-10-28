@@ -123,7 +123,7 @@ export function renderCharacterGallery() {
         {
             id: "Lucy",
             name: "Lucy Heartfilia",
-            description: "Maga celestial, inteligente y empática, miembro de Fairy Tail.",
+            description: "Talentosa maga celestial de Fairy Tail que destaca por su gran empatía e inteligencia",
             image: "./src/Documentacion/assets/Lucy.jpeg",
         },
         {
@@ -135,7 +135,7 @@ export function renderCharacterGallery() {
         {
             id: "Happy",
             name: "Happy",
-            description: "Gato azul alado, alegre y fiel compañero de Natsu.",
+            description: "Gato/Exceed azul alado, alegre y fiel compañero de Natsu.",
             image: "./src/Documentacion/assets/Happy.jpeg",
         },
     ];
