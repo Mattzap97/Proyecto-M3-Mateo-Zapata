@@ -517,8 +517,8 @@
 }
 
 .chatApp .chatHeader__avatar {
-    width: 58px;
-    height: 58px;
+    width: 70px;
+    height: 70px;
     flex-shrink: 0;
     object-fit: cover;
     border-radius: 50%;
@@ -558,21 +558,21 @@
 /* Encabezado de Lucy */
 .chatApp--lucy .chatHeader,
 .chatApp--lucy .chatComposer {
-    background: #3b5998;
+    background: #385ba5;
     color: #ffffff;
 }
 
 /* Encabezado de Natsu */
 .chatApp--natsu .chatHeader,
 .chatApp--natsu .chatComposer {
-    background: #a33b3b;
+    background: #9b2e2e;
     color: #ffffff;
 }
 
 /* Encabezado de Happy */
 .chatApp--happy .chatHeader,
 .chatApp--happy .chatComposer {
-    background: #286477;
+    background: #2c6f83;
     color: #ffffff;
 }
 
@@ -607,4 +607,59 @@
 .chatApp .chatHeader,
 .chatApp .chatComposer {
     border-color: rgb(255 255 255 / 20%);
+}
+
+
+
+/*================================================================================================================================================================================ 
+                                                                    BOTONES Y CAMPO DE ESCRITURA
+==================================================================================================================================================================================== */
+
+/* Botón Borrar Historial */
+.chatApp .chatHeader__clear {
+    color: #ffffff;
+    background: rgb(255 255 255 / 18%);
+    border: 1px solid rgb(255 255 255 / 65%);
+    border-radius: 0.7rem;
+    padding: 0.65rem 1rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.chatApp .chatHeader__clear:hover {
+    background: rgb(255 255 255 / 30%);
+}
+
+/* Campo para escribir */
+.chatApp .chatComposer input,
+.chatApp .chatComposer textarea {
+    color: #ffffff;
+    background: rgb(255 255 255 / 18%);
+    border: 1px solid rgb(255 255 255 / 65%);
+}
+
+/* Texto de ejemplo del campo */
+.chatApp .chatComposer input::placeholder,
+.chatApp .chatComposer textarea::placeholder {
+    color: rgb(255 255 255 / 90%);
+}
+
+/* Botón Enviar */
+.chatApp .chatComposer button {
+    color: #ffffff;
+    background: rgb(255 255 255 / 20%);
+    border: 1px solid rgb(255 255 255 / 75%);
+    font-weight: 700;
+}
+
+.chatApp .chatComposer button:hover {
+    background: rgb(255 255 255 / 32%);
+}
+
+/* Mejor contraste al seleccionar el campo */
+.chatApp .chatComposer input:focus,
+.chatApp .chatComposer textarea:focus {
+    border-color: #ffffff;
+    box-shadow: 0 0 0 3px rgb(255 255 255 / 20%);
+    outline: none;
 }
