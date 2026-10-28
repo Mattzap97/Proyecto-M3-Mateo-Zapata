@@ -555,6 +555,7 @@ body {
 
     .view--characters .characterCard__image {
         height: 220px;
+        background: #f7ffd1a6;
     }
 
 
@@ -646,4 +647,23 @@ body {
         min-height: calc(100svh - 60px);
         padding: 2rem;
     }
+}
+
+
+
+
+.about__tech-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 0.75rem;
+    margin-bottom: 2rem;
+}
+
+.about__tech-logos img {
+    width: 36px;
+    height: 36px;
+    object-fit: contain;
 }

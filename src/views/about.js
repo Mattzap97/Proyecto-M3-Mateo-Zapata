@@ -37,11 +37,15 @@ export function renderAbout() {
             <div class="about__card">
                 <h2>Tecnologías</h2>
 
-                <p>
-                    <strong>Stack:</strong>
-                    HTML, CSS y JavaScript vanilla con módulos ES nativos,
-                    sin frameworks ni bundlers.
-                </p>
+                <p><strong>Stack:</strong></p>
+                <div class="about__tech-logos">
+                    <img src="https://cdn.simpleicons.org/html5/E34F26" alt="HTML5" title="HTML5">
+                    <img src="https://cdn.simpleicons.org/css/663399" alt="CSS" title="CSS">
+                    <img src="https://cdn.simpleicons.org/javascript/F7DF1E" alt="JavaScript" title="JavaScript">
+                    <img src="https://cdn.simpleicons.org/github/181717" alt="GitHub" title="GitHub">
+                    <img src="https://cdn.simpleicons.org/vercel/000000" alt="Vercel" title="Vercel">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/ChatGPT_logo.svg" alt="OpenAI / ChatGPT" title="ChatGPT">
+                </div>
 
                 <p>
                     <strong>Inteligencia artificial:</strong>
