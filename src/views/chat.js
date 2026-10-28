@@ -264,8 +264,7 @@ function renderStatus () {
     }
 
     if(state.status === "loading") {
-        return `
-            <div class="message message--character message--typing>${characters[state.character].name} está escribiendo...</div>`;
+        return `<div class="message message--character message--typing">${characters[state.character].name} está escribiendo...</div>`;
     }
 
     if(state.status === "error") {
