@@ -18,18 +18,26 @@ const characters = {
         subtitle: "Maga celestial y miembro de Fairy Tail",
         greeting: "¡Hola! Soy Lucy. ¿De qué te gustaría hablar?",
         prompt: LUCY_HEARTFILIA_SYSTEM_PROMPT,
+        image: "./src/Documentacion/assets/lucypro.jpeg",
+
     },
+
     Natsu: {
         name: "Natsu Dragneel",
         subtitle: "Dragon Slayer de fuego y miembro de Fairy Tail",
         greeting: "¡Hey! Soy Natsu. ¿Listo para una aventura?",
         prompt: NATSU_DRAGNEEL_SYSTEM_PROMPT,
+        image: "./src/Documentacion/assets/natsupro.jpeg"
+
     },
+
     Happy: {
         name: "Happy",
         subtitle: "Gato/Exceed azul alado y compañero de Natsu",
         greeting: "¡Aye! Soy Happy. ¿Trajiste pescado?",
         prompt: HAPPY_SYSTEM_PROMPT,
+        image: "./src/Documentacion/assets/happypro.jpeg"
+
     },
 };
 
@@ -208,9 +216,26 @@ export function renderChat () {
     app.innerHTML = `
         <div class="chatApp chatApp--${state.character.toLowerCase()}">
             <header class="chatHeader">
-                <h1 class="chatHeader__title">Chat con ${characters[state.character].name}</h1>
-                <p class="chatHeader__subtitle">${characters[state.character].subtitle}</p>
-                <button class ="chatHeader__clear" id="clearHistory" type="button">Borrar Historial</button>
+                <div class="chatHeader__identity">
+                    <img
+                        class="chatHeader__avatar"
+                        src="${characters[state.character].image}"
+                        alt="${characters[state.character].name}"
+                    />
+
+                    <div class="chatHeader__info">
+                        <h1 class="chatHeader__title">
+                            Chat con ${characters[state.character].name}
+                        </h1>
+                        <p class="chatHeader__subtitle">
+                            ${characters[state.character].subtitle}
+                        </p>
+                    </div>
+                </div>
+
+                <button class="chatHeader__clear" id="clearHistory" type="button">
+                    Borrar Historial
+                </button>
             </header>
 
             <main class="chatMessages" id="chatMessages" aria-live="polite">

@@ -458,9 +458,9 @@
 }
 
 
-
-
-/* ===== MEJORA GENERAL DEL CHAT ===== */
+/* ======================================================================================================================================================
+                                                                MEJORA GENERAL DEL CHAT 
+========================================================================================================================================================= */
 
 .chatApp {
     background: var(--chat-background, #f8fafc);
@@ -500,4 +500,51 @@
     padding: 1rem 1.25rem;
     background: #ffffff;
     border-top: 1px solid #e2e8f0;
+}
+
+
+
+
+/* =========================================================================================================================================================================
+                                                                IMAGEN DEL PERSONAJE EN EL ENCABEZADO 
+==========================================================================================================================================================================*/
+
+.chatApp .chatHeader__identity {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    min-width: 0;
+}
+
+.chatApp .chatHeader__avatar {
+    width: 58px;
+    height: 58px;
+    flex-shrink: 0;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--chat-accent, #64748b);
+}
+
+.chatApp .chatHeader__info {
+    min-width: 0;
+}
+
+.chatApp .chatHeader__title {
+    margin: 0 0 0.3rem;
+}
+
+.chatApp .chatHeader__subtitle {
+    margin: 0 0 0.5rem;
+    line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+    .chatApp .chatHeader__avatar {
+        width: 48px;
+        height: 48px;
+    }
+
+    .chatApp .chatHeader__identity {
+        gap: 0.7rem;
+    }
 }
