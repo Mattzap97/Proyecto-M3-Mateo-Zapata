@@ -368,6 +368,7 @@ body {
     background-repeat: no-repeat;
 }
 
+
 .welcome__content {
     width: 100%;
     max-width: 680px;
@@ -446,6 +447,9 @@ body {
     max-width: none;
     margin: 0 auto;
     padding: 1.5rem 1rem 2rem;
+
+    min-height: calc(100svh - 60px);
+    padding: 1.25rem;
 
     background-image: url("./Documentacion/assets/gremiofairy.jpeg");
     background-size: cover;
