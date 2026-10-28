@@ -250,7 +250,7 @@ body {
     50% { opacity: 0.9; }
 }
 
-.message--error {
+/*.message--error {
     align-self: center;
     max-width: 90%;
     background: #fee2e2;
@@ -258,7 +258,7 @@ body {
     border: 1px solid #fecaca;
     font-size: 0.9rem;
     text-align: center;
-}
+}*/
 
 .chatComposer__input:disabled,
 .chatComposer__send:disabled {
@@ -266,7 +266,7 @@ body {
     cursor: not-allowed;
 }
 
-.message__retry {
+/*.message__retry {
     display: block;
     margin: 0.5rem auto 8;
     padding: 0.25rem 0.75rem;
@@ -277,7 +277,7 @@ body {
     font: inherit;
     font-size: 0.85rem;
     cursor: pointer;
-}
+}*/
 
 .message__retry:hover {
     background: #991b1b;
