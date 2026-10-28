@@ -444,25 +444,30 @@ body {
 
 
 .welcome__eyebrow {
-    margin-bottom: 1rem;
-    color: #fde68a;
+    margin-bottom: 2rem;
+    color: #ffffff;
     font-weight: 700;
     letter-spacing: 0.08em;
+    text-shadow: 0 2px 4px rgb(0 0 0 / 90%);
     
 }
 
 .welcome__content h1 {
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     font-size: clamp(2rem, 8vw, 3.5rem);
     line-height: 1.1;
 }
 
+
 .welcome__description {
     max-width: 48ch;
-    margin: 0 auto 1.5rem;
+    margin: 0 auto 2rem;
     color: #ffffff;
+    font-weight: 600;
     line-height: 1.7;
+    text-shadow: 0 2px 4px rgb(0 0 0 / 90%);
 }
+
 
 .welcome__content .btn {
     display: inline-flex;
@@ -565,4 +570,10 @@ body {
     .view--characters .characterCard__image {
         height: 240px;
     }
+}
+
+/* Mejorar la visibilidad del texto de bienvenida */
+.view--welcome .welcome__eyebrow,
+.view--welcome .welcome__description {
+    color: #ffffff !important;
 }
