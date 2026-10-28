@@ -16,20 +16,21 @@ export function renderAbout() {
 
                 <p>
                     <strong>Lucy Heartfilia:</strong>
-                    Maga celestial inteligente y empática, capaz de invocar
-                    espíritus estelares mediante sus llaves mágicas.
+                    Su aventura comienza al unirse al gremio Fairy Tail, donde descubre
+                    el valor de la amistad, la confianza y el trabajo en equipo.
+
                 </p>
 
                 <p>
                     <strong>Natsu Dragneel:</strong>
-                    Dragon Slayer de fuego, valiente y decidido,
-                    siempre dispuesto a proteger a sus amigos.
+                    Mago de Fairy Tail y Dragon Slayer de Fuego, conocido por su valentía,
+                    su espíritu impulsivo y su inquebrantable lealtad hacia sus amigos.
                 </p>
 
                 <p>
                     <strong>Happy:</strong>
-                    Gato azul alado, alegre y leal compañero de Natsu,
-                    conocido por su humor y su frase «¡Aye!».
+                    Aunque suele aportar humor a las aventuras, también demuestra
+                    valentía y una gran lealtad cuando sus amigos lo necesitan.
                 </p>
             </div>
 
