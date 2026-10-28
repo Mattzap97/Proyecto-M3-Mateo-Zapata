@@ -120,6 +120,66 @@ body {
 }
 
 
+
+/* ABOUT: diseño mobile first */
+.view--about {
+    width: 100%;
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 2rem;
+    text-align: left;
+}
+
+.view--about h1 {
+    margin-bottom: 1.25rem;
+    color: #1f2937;
+    font-size: 1.75rem;
+    text-align: left;
+}
+
+.view--about .about__intro {
+    margin-bottom: 1.25rem;
+    line-height: 1.6;
+}
+
+.view--about .about__card {
+    margin-bottom: 1rem;
+    padding: 1rem;
+    background: #ffffff;
+    border: 1px solid #dfe3dc;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgb(17 24 39 / 5%);
+}
+
+.view--about .about__card h2 {
+    margin-bottom: 0.75rem;
+    color: #1f2937;
+    font-size: 1.2rem;
+}
+
+.view--about .about__card p {
+    margin-bottom: 0.75rem;
+    color: #374151;
+    line-height: 1.6;
+}
+
+.view--about .about__card p:last-child {
+    margin-bottom: 0;
+}
+
+/* Tablets y computadoras */
+@media (min-width: 768px) {
+    .view--about {
+        padding: 2rem 1.5rem;
+    }
+
+    .view--about .about__card {
+        padding: 1.25rem;
+    }
+}
+
+
+
 /*======================================================================================================================================================
                                                 DISEÑOS PARA ESTADOS DEL CHAT
 ========================================================================================================================================================*/
