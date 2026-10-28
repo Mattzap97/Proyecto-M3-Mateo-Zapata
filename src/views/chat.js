@@ -18,7 +18,7 @@ const characters = {
         subtitle: "Maga celestial y miembro de Fairy Tail",
         greeting: "¡Hola! Soy Lucy. ¿De qué te gustaría hablar?",
         prompt: LUCY_HEARTFILIA_SYSTEM_PROMPT,
-        image: "./src/Documentacion/assets/lucypro.jpeg",
+        image: "/src/Documentacion/assets/lucypro.jpeg",
 
     },
 
@@ -27,7 +27,7 @@ const characters = {
         subtitle: "Dragon Slayer de fuego y miembro de Fairy Tail",
         greeting: "¡Hey! Soy Natsu. ¿Listo para una aventura?",
         prompt: NATSU_DRAGNEEL_SYSTEM_PROMPT,
-        image: "./src/Documentacion/assets/natsupro.jpeg"
+        image: "/src/Documentacion/assets/natsupro.jpeg",
 
     },
 
@@ -36,7 +36,7 @@ const characters = {
         subtitle: "Gato/Exceed azul alado y compañero de Natsu",
         greeting: "¡Aye! Soy Happy. ¿Trajiste pescado?",
         prompt: HAPPY_SYSTEM_PROMPT,
-        image: "./src/Documentacion/assets/happypro.jpeg"
+        image: "/src/Documentacion/assets/happypro.jpeg",
 
     },
 };
