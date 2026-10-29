@@ -1,8 +1,6 @@
-//import { send as sendToMock } from "./mockLucyApi.js";
+
 import { 
     LUCY_HEARTFILIA_SYSTEM_PROMPT,
-    NATSU_DRAGNEEL_SYSTEM_PROMPT, 
-    HAPPY_SYSTEM_PROMPT,
 } from "./prompts.js";
 
 import { buildPayload, normalizeAIResponse, getTrimmedHistory } from "../transform/chatPayload.js";

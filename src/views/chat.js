@@ -123,19 +123,19 @@ export function renderCharacterGallery() {
         {
             id: "Lucy",
             name: "Lucy Heartfilia",
-            description: "Talentosa maga celestial de Fairy Tail que destaca por su gran empatía e inteligencia",
+            description: "Talentosa maga celestial de Fairy Tail que destaca por su gran empatía e inteligencia.",
             image: "./src/Documentacion/assets/Lucy.jpeg",
         },
         {
             id: "Natsu",
             name: "Natsu Dragneel",
-            description: "Dragon Slayer de fuego, valiente y protector de sus amigos.",
+            description: "Mítico Dragon Slayer de fuego. Impulsivo, valiente y protector de sus amigos.",
             image: "./src/Documentacion/assets/Natsu.jpeg",
         },
         {
             id: "Happy",
             name: "Happy",
-            description: "Gato/Exceed azul alado, alegre y fiel compañero de Natsu.",
+            description: "Gato/Exceed azul alado, alegre, bromista y fiel compañero de Natsu. Su comida favorita es el pescado.",
             image: "./src/Documentacion/assets/Happy.jpeg",
         },
     ];
