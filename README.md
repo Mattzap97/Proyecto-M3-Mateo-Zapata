@@ -86,21 +86,21 @@ Proyecto M3-Mateo Zapata/
 │   │   └── chatPayload.js
 │   ├── ui/
 │   │   └── messages.js
-│   └── views/
-│       ├── about.js
-│       ├── chat.js
-│       ├── home.js
-│       └── notFound.js
+│   ├── views/
+│   │   ├── about.js
+│   │   ├── chat.js
+│   │   ├── home.js
+│   │   └── notFound.js
+│   ├── animations.css
+│   ├── design.css
+│   ├── main.js
+│   ├── navigation.js
+│   ├── router.js
+│   ├── styles.css
+│   └── utils.js
 ├── tests/
 │   ├── chatApi.test.js
 │   └── chatPayload.test.js
-├── animations.css
-├── design.css
-├── main.js
-├── navigation.js
-├── router.js
-├── styles.css
-├── utils.js
 ├── .env.example
 ├── .gitignore
 ├── index.html
