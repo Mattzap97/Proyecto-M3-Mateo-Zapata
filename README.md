@@ -72,7 +72,7 @@ La estructura general de referencia es la siguiente. Debe ajustarse a los nombre
 
 ```text
 
-Proyecto-M2-Mateo-Zapata/
+Proyecto M3-Mateo-Zapata/
 ├── api/
 │   └── chat.js
 ├── src/
