@@ -174,7 +174,7 @@ export function renderCharacterGallery() {
         button.addEventListener("click", () => {
             const characterId = button.dataset.character;
 
-            sessionStorage.setItem("selectedCharacter", characterId);
+            localStorage.setItem("selectedCharacter", characterId);
 
             window.history.pushState(
                 {},
