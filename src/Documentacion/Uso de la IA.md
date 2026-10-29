@@ -51,7 +51,12 @@ Brindame una guía de como se puede mejorar la implementación de la imagen de L
 La respuesta de la IA brindó una buena sugerencia para ajustar la imagen del personaje dentro de su tarjeta de personaje y de esta manera evitar que la misma dañe la interfaz de usuario.
 
 ## Prompt:
+
+Ayúdame guiando paso a paso cómo puedo retirar este autocompletado de palabras usadas en conversaciones anteriores al momento de escribir un nuevo mensaje dentro de cada chat sin romper ningún código de funcionamiento actual.
+
 <p align="center">
 <img width="275px" height="500px" hspace="30" alt="QUITARHISTORIALDEAUTOCOMPLETARENELTECLADO" src="https://github.com/user-attachments/assets/213c8699-d4c0-4577-83d6-80a737c243ab" />
 <img width="275px" height="500px" hspace="30" alt="QUITARHISTORIALDEAUTOCOMPLETARENELTECLADO1" src="https://github.com/user-attachments/assets/e91f9cbf-8ff1-4b7b-ae61-09e10e0f3254" />
+
+La respuesta de la IA brindó una muy buena guía de como retirar ese autocompletado de palabras y que la misma ya no se visualice dentro de la casilla donde escribes un nuevo mensaje y de esta manera evitar dar al usuario una mala experiencia.
 
