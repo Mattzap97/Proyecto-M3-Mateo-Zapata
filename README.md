@@ -303,7 +303,7 @@ Durante el desarrollo de la API se usó la IA como asistente y herramienta de ap
 
 Los prompts utilizados y la evidencia visual de cómo la inteligencia artificial influyó para el desarrollo de este proyecto están documentados en
 
-[Ver el documento del uso de la IA](src/Documentacion)
+[Ver el documento del uso de la IA](src/Documentacion/Uso%20de%20la%20IA.md)
 
 
 ## 🙌 Créditos y agradecimientos
