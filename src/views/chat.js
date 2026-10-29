@@ -46,7 +46,7 @@ const characters = {
 ================================================================================================================================================*/
 
 function getConversation(characterId) {
-    const saved = sessionStorage.getItem(`chatHistory_${characterId}`);
+    const saved = localStorage.getItem(`chatHistory_${characterId}`);
 
     if(saved) {
 
@@ -76,7 +76,7 @@ function getConversation(characterId) {
 
 function saveConversation(characterId, messages) {
 
-    sessionStorage.setItem(
+    localStorage.setItem(
         `chatHistory_${characterId}`,
         JSON.stringify(messages),
 
@@ -85,7 +85,7 @@ function saveConversation(characterId, messages) {
 
 
 
-const selectedCharacter = sessionStorage.getItem("selectedCharacter");
+const selectedCharacter = localStorage.getItem("selectedCharacter");
 const initialCharacter = characters[selectedCharacter] ? selectedCharacter : "Lucy";
 
 const state = {
@@ -198,7 +198,7 @@ export function renderCharacterGallery() {
 export function renderChat () {
     const app = document.querySelector("#app");
 
-    const selectedCharacter = sessionStorage.getItem("selectedCharacter");
+    const selectedCharacter = localStorage.getItem("selectedCharacter");
 
     if (
         selectedCharacter &&
