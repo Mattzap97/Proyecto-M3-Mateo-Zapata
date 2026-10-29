@@ -260,7 +260,7 @@ body {
 
 .view--characters > h1 {
     margin-bottom: 0.75rem;
-    color: #111827;
+    color: #aaaeb6;
     font-size: 1.65rem;
     line-height: 1.2;
     text-align: center;
@@ -268,7 +268,7 @@ body {
 
 .view--characters > p {
     margin-bottom: 1.5rem;
-    color: #4b5563;
+    color: #d8dce2;
     line-height: 1.6;
     text-align: center;
 }
