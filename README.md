@@ -297,6 +297,15 @@ Vista con información del proyecto, tecnologías utilizadas y créditos.
 - La disponibilidad y el uso de Gemini dependen de la configuración de la API, sus límites y las condiciones del servicio.
 - Las respuestas generadas por inteligencia artificial pueden contener errores o información imprecisa.
 
+### ℹ Uso de la Inteligencia Artificial
+Durante el desarrollo de la API se usó la IA como asistente y herramienta de apoyo para:
+
+
+Los prompts utilizados y la evidencia visual de cómo la inteligencia artificial influyó para el desarrollo de este proyecto están documentados en
+
+[Ver el documento del uso de la IA](src/Documentacion)
+
+
 ## 🙌 Créditos y agradecimientos
 
 **Desarrollado por:** Mateo Zapata.
