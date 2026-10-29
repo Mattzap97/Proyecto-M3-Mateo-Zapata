@@ -38,4 +38,20 @@ su funcionalidad.
 <p align="center">
 <img width="30%" hspace="40" alt="SUGERENCIAPARAEXTRACREDIT" src="https://github.com/user-attachments/assets/84d5b48c-a26f-46e7-b0dc-754c1e8d11b0" />
 
+La respuesta de la IA ayudó a crear nuevas tarjetas de selección de personajes sin necesidad de aumentar código innesario y evitando romper el mismo que ya daba funcionalidad.
+
+## Prompt:
+
+Brindame una guía de como se puede mejorar la implementación de la imagen de Lucy Heartfilia con reglas CSS para evitar que sus dimensiones rompan el diseño de su tarjeta de personaje.
+
+<p align="center">
+<img width=40%" hspace="40" alt="SUGERENCIACSSIMAGEN" src="https://github.com/user-attachments/assets/8e3d2173-ebba-4572-95d2-313ea23934c2" />
+<img width="40%" hspace="40" alt="SUGERENCIACSSIMAGEN1" src="https://github.com/user-attachments/assets/3003296e-3cf8-4257-b381-55b535b99470" />
+
+La respuesta de la IA brindó una buena sugerencia para ajustar la imagen del personaje dentro de su tarjeta de personaje y de esta manera evitar que la misma dañe la interfaz de usuario.
+
+## Prompt:
+<p align="center">
+<img width="275px" height="500px" hspace="30" alt="QUITARHISTORIALDEAUTOCOMPLETARENELTECLADO" src="https://github.com/user-attachments/assets/213c8699-d4c0-4577-83d6-80a737c243ab" />
+<img width="275px" height="500px" hspace="30" alt="QUITARHISTORIALDEAUTOCOMPLETARENELTECLADO1" src="https://github.com/user-attachments/assets/e91f9cbf-8ff1-4b7b-ae61-09e10e0f3254" />
 
