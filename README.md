@@ -135,7 +135,7 @@ git clone https://github.com/Mattzap97/Proyecto-M3-Mateo-Zapata.git
 Ingresa a la carpeta del proyecto:
 
 ```bash
-cd [NOMBRE_DE_LA_CARPETA]
+cd Proyecto M3-Mateo Zapata
 ```
 
 ### 2. Instalar las dependencias
