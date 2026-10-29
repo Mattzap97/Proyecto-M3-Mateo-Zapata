@@ -517,8 +517,8 @@
 }
 
 .chatApp .chatHeader__avatar {
-    width: 70px;
-    height: 70px;
+    width: 90px;
+    height: 90px;
     flex-shrink: 0;
     object-fit: cover;
     border-radius: 50%;
