@@ -268,7 +268,6 @@ Vista de bienvenida de Fairy Tail Chat.
 
 ![Captura de pantalla de Home](src/Documentacion/assets/homeimg.jpeg)
 
-> Reemplaza la ruta por la ubicación real de tu captura.
 
 ### Selección de personajes
 
