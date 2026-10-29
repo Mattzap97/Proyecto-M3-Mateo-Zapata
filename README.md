@@ -320,7 +320,7 @@ Este proyecto se creó con fines educativos y como una experiencia práctica de 
 
 Los personajes, nombres y elementos relacionados con *Fairy Tail* pertenecen a sus respectivos titulares. La obra original fue creada por Hiro Mashima. Este proyecto es una iniciativa independiente y no está afiliado oficialmente a los titulares de la franquicia.
 
-Se agradece a las herramientas, la documentación técnica y los recursos de aprendizaje utilizados durante el desarrollo.
+Se agradece a las herramientas, la documentación técnica, al instructor de Henry y los recursos de aprendizaje utilizados durante el desarrollo.
 
 ---
 
