@@ -352,7 +352,7 @@ function setupChat () {
 
     $input.focus();
 
-//CÓDIGO PARA EL FUNCIONAMIENTO DEL BOTÓN PARA BORRAR HISTORIAL DE CONVERSACIÓN EN EL CHAT
+//CÓDIGO PARA EL FUNCIONAMIENTO DEL BOTÓN QUE BORRA HISTORIAL DE CONVERSACIÓN EN EL CHAT
     $clearHistory?.addEventListener("click", () => {
         const confirmed = window.confirm(
             `¿Quieres borrar la conversación de ${characters[state.character].name}?`
@@ -360,7 +360,7 @@ function setupChat () {
 
         if (!confirmed) return;
 
-        sessionStorage.removeItem(`chatHistory_${state.character}`);
+        localStorage.removeItem(`chatHistory_${state.character}`);
 
         state.messages = [{
             role: "character",
