@@ -46,7 +46,7 @@ const characters = {
 ================================================================================================================================================*/
 
 function getConversation(characterId) {
-    const saved = localStorage.getItem(`chatHistory_${characterId}`);
+    const saved = sessionStorage.getItem(`chatHistory_${characterId}`);
 
     if(saved) {
 
@@ -76,7 +76,7 @@ function getConversation(characterId) {
 
 function saveConversation(characterId, messages) {
 
-    localStorage.setItem(
+    sessionStorage.setItem(
         `chatHistory_${characterId}`,
         JSON.stringify(messages),
 
@@ -85,7 +85,7 @@ function saveConversation(characterId, messages) {
 
 
 
-const selectedCharacter = localStorage.getItem("selectedCharacter");
+const selectedCharacter = sessionStorage.getItem("selectedCharacter");
 const initialCharacter = characters[selectedCharacter] ? selectedCharacter : "Lucy";
 
 const state = {
@@ -123,7 +123,7 @@ export function renderCharacterGallery() {
         {
             id: "Lucy",
             name: "Lucy Heartfilia",
-            description: "Talentosa maga celestial de Fairy Tail que destaca por su gran empatía e inteligencia.",
+            description: "Talentosa maga celestial de Fairy Tail que destaca por su gran empatía e inteligencia",
             image: "./src/Documentacion/assets/Lucy.jpeg",
         },
         {
@@ -198,7 +198,7 @@ export function renderCharacterGallery() {
 export function renderChat () {
     const app = document.querySelector("#app");
 
-    const selectedCharacter = localStorage.getItem("selectedCharacter");
+    const selectedCharacter = sessionStorage.getItem("selectedCharacter");
 
     if (
         selectedCharacter &&
@@ -352,7 +352,7 @@ function setupChat () {
 
     $input.focus();
 
-//CÓDIGO PARA EL FUNCIONAMIENTO DEL BOTÓN QUE BORRA HISTORIAL DE CONVERSACIÓN EN EL CHAT
+//CÓDIGO PARA EL FUNCIONAMIENTO DEL BOTÓN PARA BORRAR HISTORIAL DE CONVERSACIÓN EN EL CHAT
     $clearHistory?.addEventListener("click", () => {
         const confirmed = window.confirm(
             `¿Quieres borrar la conversación de ${characters[state.character].name}?`
@@ -360,7 +360,7 @@ function setupChat () {
 
         if (!confirmed) return;
 
-        localStorage.removeItem(`chatHistory_${state.character}`);
+        sessionStorage.removeItem(`chatHistory_${state.character}`);
 
         state.messages = [{
             role: "character",
