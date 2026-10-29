@@ -261,15 +261,15 @@ body {
 .view--characters > h1 {
     margin-bottom: 0.75rem;
     color: #060707;
-    font-size: 1.87rem;
+    font-size: 1.75rem;
     line-height: 1.2;
     text-align: center;
 }
 
 .view--characters > p {
     margin-bottom: 1.5rem;
-    font-size: 1.1rem;
-    color: #d8dce2;
+    font-size: 1.05rem;
+    color: #e2ecfc;
     line-height: 1.6;
     text-align: center;
 }
