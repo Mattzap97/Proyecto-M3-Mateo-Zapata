@@ -60,3 +60,27 @@ Ayúdame guiando paso a paso cómo puedo retirar este autocompletado de palabras
 
 La respuesta de la IA brindó una muy buena guía de como retirar ese autocompletado de palabras y que la misma ya no se visualice dentro de la casilla donde escribes un nuevo mensaje y de esta manera evitar dar al usuario una mala experiencia.
 
+## Prompt:
+
+Ayúdame a encontrar el fallo de sintaxis dentro del código implementado para realizar pruebas en vitest.
+
+<p align="center">
+<img width="200px" height="450px" hspace="10" alt="ERRORSINTAXISALEJECUTARVITEST" src="https://github.com/user-attachments/assets/bdb48a96-408e-4f12-9bae-3db0f53c064c" />
+<img width="200px" height="450px" hspace="10" alt="ERRORSINTAXISALEJECUTARVITEST1" src="https://github.com/user-attachments/assets/d981af1f-94aa-4991-aa12-c706b1defdf3" />
+<img width="200px" height="450px" hspace="10" alt="ERRORSINTAXISALEJECUTARVITEST2" src="https://github.com/user-attachments/assets/8add0a63-e6b7-4aea-841d-ee05826f1095" />
+
+La respuesta de la IA ayudó a localizar el problema de sintáxis que se encontraba dentro de cada código y de esta manera poder ejecutar los test en vitest de manera correcta.
+
+
+## Prompt:
+
+Ayúdame a localizar este bug que no permite que los mensajes del chat se reciban de manera correcta por parte de la IA, y además tarda demasiado en responder.
+
+<p align="center">
+<img width="275px" height="500px" hspace="30" alt="ERRORENCHATCLAUDE1" src="https://github.com/user-attachments/assets/454f4831-526f-4a22-81ae-819551f81701" />
+<img width="275px" height="500px" hspace="30" alt="ERRORENCHATCLAUDE" src="https://github.com/user-attachments/assets/ace8ec31-1232-40f1-a0b9-cf7a536927ee" />
+
+La respuesta de la IA brindó la solución a ese bug que no permitía recibir mensajes de la manera en que se estaba esperando y además dentro del código se configuró correctamente un tiempo de espera que no tenía nada que ver con Gemini IA.
+
+
+
