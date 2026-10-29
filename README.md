@@ -296,7 +296,7 @@ Vista con información del proyecto, tecnologías utilizadas y créditos.
 - La disponibilidad y el uso de Gemini dependen de la configuración de la API, sus límites y las condiciones del servicio.
 - Las respuestas generadas por inteligencia artificial pueden contener errores o información imprecisa.
 
-### ℹ Uso de la Inteligencia Artificial
+## ℹ Uso de la Inteligencia Artificial
 Durante el desarrollo de la API se usó la IA como asistente y herramienta de apoyo para:
 
 - Mejorar la interfaz de las tarjetas de personaje y evitar que las dimensiones de sus imágenes rompan el diseño de las mismas.
