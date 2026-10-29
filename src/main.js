@@ -8,9 +8,9 @@ const isReload = performance
     .getEntriesByType("navigation")[0]?.type === "reload";
 
 if (isReload) {
-    sessionStorage.removeItem("chatHistory_Lucy");
-    sessionStorage.removeItem("chatHistory_Natsu");
-    sessionStorage.removeItem("chatHistory_Happy");
+    localStorage.removeItem("chatHistory_Lucy");
+    localStorage.removeItem("chatHistory_Natsu");
+    localStorage.removeItem("chatHistory_Happy");
 }
 
 setupLinkInterception();
