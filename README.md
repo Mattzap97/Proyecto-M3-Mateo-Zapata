@@ -300,6 +300,12 @@ Vista con información del proyecto, tecnologías utilizadas y créditos.
 ### ℹ Uso de la Inteligencia Artificial
 Durante el desarrollo de la API se usó la IA como asistente y herramienta de apoyo para:
 
+- Mejorar la interfaz de las tarjetas de personaje y evitar que las dimensiones de sus imágenes rompan el diseño de las mismas.
+- Mejorar y complementar de manera precisa los prompts de los personajes basándose en la personalidad de cada uno.
+- Mejorar sintáxis de código para reparar bugs innecesarios.
+- Brindar mejor diseño para aportar a la experiencia de usuario al momento de navegar por la SPA.
+- Corrección de sintáxis dentro del código implementado para ejecutar tests en vitest.
+- Modularizar código innecesariamente repetido y que no afectaba la funcionalidad de la aplicación.
 
 Los prompts utilizados y la evidencia visual de cómo la inteligencia artificial influyó para el desarrollo de este proyecto están documentados en
 
