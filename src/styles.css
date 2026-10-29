@@ -259,7 +259,7 @@ body {
 }
 
 .view--characters > h1 {
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.65rem;
     color: #060707;
     font-size: 1.75rem;
     line-height: 1.2;
@@ -270,6 +270,7 @@ body {
     margin-bottom: 1.5rem;
     font-size: 1.05rem;
     color: #e2ecfc;
+    text-shadow: 0 2px 4px rgb(0 0 0 / 90%);
     line-height: 1.6;
     text-align: center;
 }
